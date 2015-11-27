@@ -1,39 +1,39 @@
-00002508 A __bss_start
-         w __cxa_finalize@@GLIBC_2.1.3
-         U __cxa_pure_virtual@@CXXABI_1.3
-00002508 A _edata
-00002520 A _end
-00001008 T _fini
-         U free@@GLIBC_2.0
-00000fd0 T GetUnitTest
-         w __gmon_start__
-00000b08 T _init
-         w _Jv_RegisterClasses
-         U malloc@@GLIBC_2.0
-         U realloc@@GLIBC_2.0
-         U strcpy@@GLIBC_2.0
-         U strlen@@GLIBC_2.0
-00000fc0 T UnitTestCount
-00000e30 T UnitTestInstallTestCase
-         U operator delete[](void*)@@GLIBCXX_3.4
-00000d60 T CTestSuite::AddTest(ITestCase*)
-00000d10 T CTestSuite::GetName()
-00000d20 T CTestSuite::RunTest()
-00000eb0 T CTestSuite::CTestSuite(char const*, ITestSuite*)
-00000eb0 T CTestSuite::CTestSuite(char const*, ITestSuite*)
-00000df0 T CTestSuite::~CTestSuite()
-00000df0 T CTestSuite::~CTestSuite()
-00000d00 T CTestCase::GetName()
-00000f40 T CTestCase::CTestCase(char const*, ITestSuite*)
-00000f40 T CTestCase::CTestCase(char const*, ITestSuite*)
-00000dc0 T CTestCase::~CTestCase()
-00000dc0 T CTestCase::~CTestCase()
-         U operator new[](unsigned int)@@GLIBCXX_3.4
-00001050 V typeinfo for CTestSuite
-00001034 V typeinfo for CTestCase
-00001040 V typeinfo name for CTestSuite
-00001028 V typeinfo name for CTestCase
-00001070 V vtable for CTestSuite
-00001060 V vtable for CTestCase
-         U vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
-         U vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3
+A __bss_start
+w __cxa_finalize@@GLIBC_2.1.3
+U __cxa_pure_virtual@@CXXABI_1.3
+A _edata
+A _end
+T _fini
+U free@@GLIBC_2.0
+T GetUnitTest
+w __gmon_start__
+T _init
+w _Jv_RegisterClasses
+U malloc@@GLIBC_2.0
+U realloc@@GLIBC_2.0
+U strcpy@@GLIBC_2.0
+U strlen@@GLIBC_2.0
+T UnitTestCount
+T UnitTestInstallTestCase
+U operator delete[](void*)@@GLIBCXX_3.4
+T CTestSuite::AddTest(ITestCase*)
+T CTestSuite::GetName()
+T CTestSuite::RunTest()
+T CTestSuite::CTestSuite(char const*, ITestSuite*)
+T CTestSuite::CTestSuite(char const*, ITestSuite*)
+T CTestSuite::~CTestSuite()
+T CTestSuite::~CTestSuite()
+T CTestCase::GetName()
+T CTestCase::CTestCase(char const*, ITestSuite*)
+T CTestCase::CTestCase(char const*, ITestSuite*)
+T CTestCase::~CTestCase()
+T CTestCase::~CTestCase()
+U operator new[](unsigned int)@@GLIBCXX_3.4
+V typeinfo for CTestSuite
+V typeinfo for CTestCase
+V typeinfo name for CTestSuite
+V typeinfo name for CTestCase
+V vtable for CTestSuite
+V vtable for CTestCase
+U vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
+U vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3

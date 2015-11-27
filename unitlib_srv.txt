@@ -1,67 +1,67 @@
-000024cc A __bss_start
-000024cc b completed.5793
-00002398 d __CTOR_END__
-0000238c d __CTOR_LIST__
-         w __cxa_finalize@@GLIBC_2.1.3
-         U __cxa_pure_virtual@@CXXABI_1.3
-00000fe0 t __do_global_ctors_aux
-00000c4c t __do_global_dtors_aux
-000024c8 d __dso_handle
-000023a0 d __DTOR_END__
-000024d0 b dtor_idx.5795
-0000239c d __DTOR_LIST__
-000023a8 a _DYNAMIC
-000024cc A _edata
-000024e4 A _end
-00001008 T _fini
-00000cbb t frame_dummy
-00001388 r __FRAME_END__
-         U free@@GLIBC_2.0
-00000fd0 T GetUnitTest
-000024b4 a _GLOBAL_OFFSET_TABLE_
-00000b70 t _GLOBAL__sub_I__ZN9CTestCaseC2EPKcP10ITestSuite
-         w __gmon_start__
-00000cf2 t __i686.get_pc_thunk.bx
-00000b10 T _init
-000023a4 d __JCR_END__
-000023a4 d __JCR_LIST__
-         w _Jv_RegisterClasses
-         U malloc@@GLIBC_2.0
-         U realloc@@GLIBC_2.0
-00000b91 t set_fast_math
-         U strcpy@@GLIBC_2.0
-         U strlen@@GLIBC_2.0
-00000fc0 T UnitTestCount
-00000e30 T UnitTestInstallTestCase
-         U operator delete[](void*)@@GLIBCXX_3.4
-000024d4 b s_TestCount
-000024dc b s_ppTestCases
-000024d8 b s_TestAllocated
-000024e0 b UNSPECIFIED_LOGGING_COLOR
-00000d60 T CTestSuite::AddTest(ITestCase*)
-00000d10 T CTestSuite::GetName()
-00000d20 T CTestSuite::RunTest()
-00000eb0 T CTestSuite::CTestSuite(char const*, ITestSuite*)
-00000eb0 T CTestSuite::CTestSuite(char const*, ITestSuite*)
-00000df0 T CTestSuite::~CTestSuite()
-00000df0 T CTestSuite::~CTestSuite()
-00000d00 T CTestCase::GetName()
-00000f40 T CTestCase::CTestCase(char const*, ITestSuite*)
-00000f40 T CTestCase::CTestCase(char const*, ITestSuite*)
-00000dc0 T CTestCase::~CTestCase()
-00000dc0 T CTestCase::~CTestCase()
-         U operator new[](unsigned int)@@GLIBCXX_3.4
-00001050 V typeinfo for CTestSuite
-000010b4 r typeinfo for ITestSuite
-00001034 V typeinfo for CTestCase
-000010ac r typeinfo for ITestCase
-00001040 V typeinfo name for CTestSuite
-000010cb r typeinfo name for ITestSuite
-00001028 V typeinfo name for CTestCase
-000010c0 r typeinfo name for ITestCase
-00001070 V vtable for CTestSuite
-00001098 r vtable for ITestSuite
-00001060 V vtable for CTestCase
-00001088 r vtable for ITestCase
-         U vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
-         U vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3
+A __bss_start
+b completed.5793
+d __CTOR_END__
+d __CTOR_LIST__
+w __cxa_finalize@@GLIBC_2.1.3
+U __cxa_pure_virtual@@CXXABI_1.3
+t __do_global_ctors_aux
+t __do_global_dtors_aux
+d __dso_handle
+d __DTOR_END__
+b dtor_idx.5795
+d __DTOR_LIST__
+a _DYNAMIC
+A _edata
+A _end
+T _fini
+t frame_dummy
+r __FRAME_END__
+U free@@GLIBC_2.0
+T GetUnitTest
+a _GLOBAL_OFFSET_TABLE_
+t _GLOBAL__sub_I__ZN9CTestCaseC2EPKcP10ITestSuite
+w __gmon_start__
+t __i686.get_pc_thunk.bx
+T _init
+d __JCR_END__
+d __JCR_LIST__
+w _Jv_RegisterClasses
+U malloc@@GLIBC_2.0
+U realloc@@GLIBC_2.0
+t set_fast_math
+U strcpy@@GLIBC_2.0
+U strlen@@GLIBC_2.0
+T UnitTestCount
+T UnitTestInstallTestCase
+U operator delete[](void*)@@GLIBCXX_3.4
+b s_TestCount
+b s_ppTestCases
+b s_TestAllocated
+b UNSPECIFIED_LOGGING_COLOR
+T CTestSuite::AddTest(ITestCase*)
+T CTestSuite::GetName()
+T CTestSuite::RunTest()
+T CTestSuite::CTestSuite(char const*, ITestSuite*)
+T CTestSuite::CTestSuite(char const*, ITestSuite*)
+T CTestSuite::~CTestSuite()
+T CTestSuite::~CTestSuite()
+T CTestCase::GetName()
+T CTestCase::CTestCase(char const*, ITestSuite*)
+T CTestCase::CTestCase(char const*, ITestSuite*)
+T CTestCase::~CTestCase()
+T CTestCase::~CTestCase()
+U operator new[](unsigned int)@@GLIBCXX_3.4
+V typeinfo for CTestSuite
+r typeinfo for ITestSuite
+V typeinfo for CTestCase
+r typeinfo for ITestCase
+V typeinfo name for CTestSuite
+r typeinfo name for ITestSuite
+V typeinfo name for CTestCase
+r typeinfo name for ITestCase
+V vtable for CTestSuite
+r vtable for ITestSuite
+V vtable for CTestCase
+r vtable for ITestCase
+U vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
+U vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3
