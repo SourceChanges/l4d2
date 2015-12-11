@@ -176,7 +176,7 @@ r CSWTCH.1198
 r CSWTCH.1198
 r CSWTCH.1199
 r CSWTCH.1199
-r CSWTCH.1204
+r CSWTCH.1203
 r CSWTCH.1205
 r CSWTCH.1205
 r CSWTCH.1209
@@ -193,7 +193,7 @@ r CSWTCH.127
 r CSWTCH.1270
 r CSWTCH.1279
 r CSWTCH.1284
-r CSWTCH.1295
+r CSWTCH.1294
 r CSWTCH.1306
 r CSWTCH.131
 r CSWTCH.1312
@@ -246,11 +246,11 @@ r CSWTCH.422
 r CSWTCH.44
 r CSWTCH.446
 r CSWTCH.46
-r CSWTCH.4753
-r CSWTCH.4755
+r CSWTCH.4752
+r CSWTCH.4754
 r CSWTCH.48
-r CSWTCH.5417
-r CSWTCH.5667
+r CSWTCH.5416
+r CSWTCH.5666
 r CSWTCH.569
 r CSWTCH.571
 r CSWTCH.573
@@ -12695,7 +12695,7 @@ b weapon_hunting_rifle
 b weapon_molotov_spawn
 b weapon_pistol_magnum
 t WriteUserCmdDeltaInt(bf_write*, char*, int, int, int) [clone .isra.14]
-t AddDamageTypeToString(char*, int, int, int, char const*, bool*) [clone .constprop.1170]
+t AddDamageTypeToString(char*, int, int, int, char const*, bool*) [clone .constprop.1171]
 t AttributeAutocomplete(char const*, char (*) [64])
 t CaptionCreateCallback(char const*, char const*, char const*, void*)
 b ClearAllNavAttributes
@@ -22344,7 +22344,7 @@ t CTutorLesson::~CTutorLesson()
 t CTutorLesson::~CTutorLesson()
 t CTutorLesson::~CTutorLesson()
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool)
-t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.1169]
+t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.1170]
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.457]
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.526]
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .part.56] [clone .constprop.63]
@@ -22758,6 +22758,12 @@ d CBoneFollower::m_DataMap
 t CBoneFollower::~CBoneFollower()
 t CBoneFollower::~CBoneFollower()
 t CBoneFollower::~CBoneFollower()
+t CCallbackImpl<12>::GetCallbackSizeBytes()
+t CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<140>::GetCallbackSizeBytes()
+t CCallbackImpl<140>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<16>::GetCallbackSizeBytes()
+t CCallbackImpl<16>::Run(void*, bool, unsigned long long)
 t CCarGlassProp::OnTakeDamage(CTakeDamageInfo const&)
 t CCarGlassProp::~CCarGlassProp()
 t CCarGlassProp::~CCarGlassProp()
@@ -23773,7 +23779,7 @@ t CTerrorPlayer::OnLeaveActiveState()
 t CTerrorPlayer::OnLeaveRescueState()
 t CTerrorPlayer::OnReleasedByTongue()
 t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&)
-t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&) [clone .part.940]
+t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&) [clone .part.941]
 t CTerrorPlayer::OnTakeDamage_Alive(CTakeDamageInfo const&)
 t CTerrorPlayer::OnUseEntityChanged()
 t CTerrorPlayer::OnZombieStateAlert()
@@ -23829,7 +23835,7 @@ t CTerrorPlayer::OnPlayerDisconnected(CTerrorPlayer*)
 t CTerrorPlayer::OnPreThinkGhostState()
 t CTerrorPlayer::OnStartBeingPummeled(CTerrorPlayer*)
 t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&)
-t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&) [clone .part.992]
+t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&) [clone .part.993]
 t CTerrorPlayer::OnZombieStateEngaged()
 t CTerrorPlayer::PassesObserverFilter(CBaseEntity const*)
 t CTerrorPlayer::ProhibitJumpingUntil(float)
@@ -37957,7 +37963,7 @@ t CDefSaveRestoreBlockHandler::Restore(IRestore*, bool)
 t CDefSaveRestoreBlockHandler::PostSave()
 t CDisablePredictionFiltering::CDisablePredictionFiltering(bool)
 t CDisablePredictionFiltering::CDisablePredictionFiltering(bool)
-t CDisablePredictionFiltering::~CDisablePredictionFiltering() [clone .constprop.1172]
+t CDisablePredictionFiltering::~CDisablePredictionFiltering() [clone .constprop.1173]
 t CDmxSerializationDictionary::GetRootElement(int)
 t CDmxSerializationDictionary::BuildElementList(CDmxElement*, bool)
 t CDmxSerializationDictionary::BuildElementList_R(CDmxElement*, bool, bool)
@@ -40624,7 +40630,7 @@ t CGasCan::~CGasCan()
 t CHandle<CBaseEntity>::operator=(CBaseEntity const*)
 t CHandle<CBaseEntity>::CHandle(CBaseEntity*)
 t CHandle<CBaseEntity>::CHandle(CBaseEntity*)
-t CHandle<CTerrorPlayer>::CHandle(CTerrorPlayer*) [clone .constprop.1171]
+t CHandle<CTerrorPlayer>::CHandle(CTerrorPlayer*) [clone .constprop.1172]
 t Charger::GetBaseMap()
 t Charger::OnTakeDamage(CTakeDamageInfo const&)
 t Charger::GetDataDescMap()
@@ -41981,21 +41987,11 @@ t void CByteswap::SwapBufferToTargetEndian<unsigned int>(unsigned int*, unsigned
 t void CByteswap::SwapBufferToTargetEndian<unsigned int>(unsigned int*, unsigned int*, int) [clone .part.68] [clone .constprop.113]
 t void CByteswap::SwapBufferToTargetEndian<short>(short*, short*, int) [clone .part.67] [clone .constprop.93]
 t CByteswap::SwapFieldsToTargetEndian(void*, void*, datamap_t*)
-t CCallback<CTerrorPlayer, GSClientAchievementStatus_t, true>::GetCallbackSizeBytes()
 t CCallback<CTerrorPlayer, GSClientAchievementStatus_t, true>::Run(void*)
-t CCallback<CTerrorPlayer, GSClientAchievementStatus_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CAchievementMgr, UserStatsStored_t, false>::GetCallbackSizeBytes()
 t CCallback<CAchievementMgr, UserStatsStored_t, false>::Run(void*)
-t CCallback<CAchievementMgr, UserStatsStored_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CTerrorGameRules, GSGameplayStats_t, true>::GetCallbackSizeBytes()
 t CCallback<CTerrorGameRules, GSGameplayStats_t, true>::Run(void*)
-t CCallback<CTerrorGameRules, GSGameplayStats_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionClosed_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionClosed_t, true>::Run(void*)
-t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionClosed_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionIssued_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionIssued_t, true>::Run(void*)
-t CCallback<CSteamWorksGameStatsUploader, GameStatsSessionIssued_t, true>::Run(void*, bool, unsigned long long)
 t CChainsaw::GetBaseMap()
 d CChainsaw::m_acttable
 t CChainsaw::ObjectCaps()
@@ -42896,7 +42892,7 @@ t IRegistry::~IRegistry()
 t IRegistry::~IRegistry()
 t KeyValues::AutoDelete::~AutoDelete()
 t KeyValues::AutoDelete::~AutoDelete()
-t KeyValues::AutoDelete::~AutoDelete() [clone .constprop.448]
+t KeyValues::AutoDelete::~AutoDelete() [clone .constprop.449]
 t KeyValues::deleteThis()
 t KeyValues::FromString(char const*, char const*, char const**)
 t KeyValues::GetNextKey()
@@ -47510,6 +47506,9 @@ r typeinfo for CBaseBeltItem
 r typeinfo for CBasePropDoor
 r typeinfo for CBoneFollower
 r typeinfo for CCallbackBase
+r typeinfo for CCallbackImpl<12>
+r typeinfo for CCallbackImpl<140>
+r typeinfo for CCallbackImpl<16>
 r typeinfo for CCarGlassProp
 r typeinfo for CCSPlayerMove
 r typeinfo for CCSWeaponInfo
@@ -49607,6 +49606,9 @@ r typeinfo name for CBaseBeltItem
 r typeinfo name for CBasePropDoor
 r typeinfo name for CBoneFollower
 r typeinfo name for CCallbackBase
+r typeinfo name for CCallbackImpl<12>
+r typeinfo name for CCallbackImpl<140>
+r typeinfo name for CCallbackImpl<16>
 r typeinfo name for CCarGlassProp
 r typeinfo name for CCSPlayerMove
 r typeinfo name for CCSWeaponInfo
@@ -51708,6 +51710,9 @@ r vtable for CBaseBeltItem
 r vtable for CBasePropDoor
 r vtable for CBoneFollower
 r vtable for CCallbackBase
+r vtable for CCallbackImpl<12>
+r vtable for CCallbackImpl<140>
+r vtable for CCallbackImpl<16>
 r vtable for CCarGlassProp
 r vtable for CCSPlayerMove
 r vtable for CCSWeaponInfo

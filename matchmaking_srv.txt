@@ -25,7 +25,7 @@ U Coroutine_YieldToMain
 U cos@@GLIBC_2.0
 T CreateInterface
 r CSWTCH.181
-r CSWTCH.258
+r CSWTCH.251
 r CSWTCH.97
 d __CTOR_END__
 d __CTOR_LIST__
@@ -1966,6 +1966,24 @@ t PlayerFriend::PlayerFriend(unsigned long long, PlayerFriend::FriendInfo_t cons
 t PlayerFriend::~PlayerFriend()
 t PlayerFriend::~PlayerFriend()
 t PlayerFriend::~PlayerFriend()
+t CCallbackImpl<12>::GetCallbackSizeBytes()
+t CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<16>::GetCallbackSizeBytes()
+t CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<1>::GetCallbackSizeBytes()
+t CCallbackImpl<1>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<20>::GetCallbackSizeBytes()
+t CCallbackImpl<20>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<20>::~CCallbackImpl()
+t CCallbackImpl<20>::~CCallbackImpl()
+t CCallbackImpl<24>::GetCallbackSizeBytes()
+t CCallbackImpl<24>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<28>::GetCallbackSizeBytes()
+t CCallbackImpl<28>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<4>::GetCallbackSizeBytes()
+t CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<8>::GetCallbackSizeBytes()
+t CCallbackImpl<8>::Run(void*, bool, unsigned long long)
 U CThreadRWLock::UnlockWrite()
 U CThreadRWLock::WaitForRead()
 U CThreadRWLock::LockForWrite()
@@ -3200,48 +3218,20 @@ t CBitWrite::WriteBitVec3Normal(Vector const&)
 t CBitWrite::WriteBitsFromBuffer(bf_read*, int)
 t CBitWrite::SeekToBit(int)
 t CBitWrite::WriteBits(void const*, int)
-t CCallback<PlayerLocal, UserStatsReceived_t, false>::GetCallbackSizeBytes()
 t CCallback<PlayerLocal, UserStatsReceived_t, false>::Run(void*)
-t CCallback<PlayerLocal, UserStatsReceived_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<PlayerLocal, PersonaStateChange_t, false>::GetCallbackSizeBytes()
 t CCallback<PlayerLocal, PersonaStateChange_t, false>::Run(void*)
-t CCallback<PlayerLocal, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<PlayerLocal, SteamServersConnected_t, false>::GetCallbackSizeBytes()
 t CCallback<PlayerLocal, SteamServersConnected_t, false>::Run(void*)
-t CCallback<PlayerLocal, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<PlayerLocal, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
 t CCallback<PlayerLocal, SteamServersDisconnected_t, false>::Run(void*)
-t CCallback<PlayerLocal, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<PlayerFriend, LobbyDataUpdate_t, false>::GetCallbackSizeBytes()
 t CCallback<PlayerFriend, LobbyDataUpdate_t, false>::Run(void*)
-t CCallback<PlayerFriend, LobbyDataUpdate_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionBase, LobbyChatMsg_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionBase, LobbyChatMsg_t, false>::Run(void*)
-t CCallback<CSysSessionBase, LobbyChatMsg_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionBase, LobbyChatUpdate_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionBase, LobbyChatUpdate_t, false>::Run(void*)
-t CCallback<CSysSessionBase, LobbyChatUpdate_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionBase, P2PSessionRequest_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionBase, P2PSessionRequest_t, false>::Run(void*)
-t CCallback<CSysSessionBase, P2PSessionRequest_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionBase, SteamServersConnected_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionBase, SteamServersConnected_t, false>::Run(void*)
-t CCallback<CSysSessionBase, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionBase, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionBase, SteamServersDisconnected_t, false>::Run(void*)
-t CCallback<CSysSessionBase, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionHost, LobbyEnter_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionHost, LobbyEnter_t, false>::Run(void*)
-t CCallback<CSysSessionHost, LobbyEnter_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CSysSessionClient, LobbyEnter_t, false>::GetCallbackSizeBytes()
 t CCallback<CSysSessionClient, LobbyEnter_t, false>::Run(void*)
-t CCallback<CSysSessionClient, LobbyEnter_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CMatchSteamInviteListener, GameLobbyJoinRequested_t, false>::GetCallbackSizeBytes()
 t CCallback<CMatchSteamInviteListener, GameLobbyJoinRequested_t, false>::Run(void*)
-t CCallback<CMatchSteamInviteListener, GameLobbyJoinRequested_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::GetCallbackSizeBytes()
 t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::Run(void*)
-t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::Run(void*, bool, unsigned long long)
 t ConVarRef::Init(char const*, bool)
 t ConVarRef::ConVarRef(IConVar*)
 t ConVarRef::ConVarRef(char const*)
@@ -3537,6 +3527,14 @@ r typeinfo for IMatchSystem
 r typeinfo for IPlayerLocal
 r typeinfo for PlayerFriend
 r typeinfo for CCallbackBase
+r typeinfo for CCallbackImpl<12>
+r typeinfo for CCallbackImpl<16>
+r typeinfo for CCallbackImpl<1>
+r typeinfo for CCallbackImpl<20>
+r typeinfo for CCallbackImpl<24>
+r typeinfo for CCallbackImpl<28>
+r typeinfo for CCallbackImpl<4>
+r typeinfo for CCallbackImpl<8>
 r typeinfo for IMatchSession
 r typeinfo for IPlayerFriend
 r typeinfo for PlayerManager
@@ -3677,6 +3675,14 @@ r typeinfo name for IMatchSystem
 r typeinfo name for IPlayerLocal
 r typeinfo name for PlayerFriend
 r typeinfo name for CCallbackBase
+r typeinfo name for CCallbackImpl<12>
+r typeinfo name for CCallbackImpl<16>
+r typeinfo name for CCallbackImpl<1>
+r typeinfo name for CCallbackImpl<20>
+r typeinfo name for CCallbackImpl<24>
+r typeinfo name for CCallbackImpl<28>
+r typeinfo name for CCallbackImpl<4>
+r typeinfo name for CCallbackImpl<8>
 r typeinfo name for IMatchSession
 r typeinfo name for IPlayerFriend
 r typeinfo name for PlayerManager
@@ -3816,6 +3822,14 @@ r vtable for IMatchSystem
 r vtable for IPlayerLocal
 r vtable for PlayerFriend
 r vtable for CCallbackBase
+r vtable for CCallbackImpl<12>
+r vtable for CCallbackImpl<16>
+r vtable for CCallbackImpl<1>
+r vtable for CCallbackImpl<20>
+r vtable for CCallbackImpl<24>
+r vtable for CCallbackImpl<28>
+r vtable for CCallbackImpl<4>
+r vtable for CCallbackImpl<8>
 r vtable for IMatchSession
 r vtable for IPlayerFriend
 r vtable for PlayerManager

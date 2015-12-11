@@ -8,12 +8,9 @@ T a2i_IPADDRESS_NC
 U abort@@GLIBC_2.0
 U accept@@GLIBC_2.0
 T ACCESS_DESCRIPTION_free
-R ACCESS_DESCRIPTION_it
+D ACCESS_DESCRIPTION_it
 T ACCESS_DESCRIPTION_new
 U access@@GLIBC_2.0
-T adler32
-T adler32_combine
-T adler32_combine64
 T AES_cbc_encrypt
 T AES_decrypt
 T AES_encrypt
@@ -34,22 +31,24 @@ T AES_set_encrypt_key
 T AES_unwrap_key
 R AES_version
 T AES_wrap_key
-U alphasort@@GLIBC_2.0
+U alphasort64@@GLIBC_2.2
 B app_pkey_methods
+U asctime_r@@GLIBC_2.0
+U asinf@@GLIBC_2.0
 T asn1_add_error
-R ASN1_ANY_it
+D ASN1_ANY_it
 T ASN1_BIT_STRING_check
 T ASN1_BIT_STRING_free
 T ASN1_BIT_STRING_get_bit
-R ASN1_BIT_STRING_it
+D ASN1_BIT_STRING_it
 T ASN1_BIT_STRING_new
 T ASN1_BIT_STRING_set
 T ASN1_BIT_STRING_set_bit
 T ASN1_BMPSTRING_free
-R ASN1_BMPSTRING_it
+D ASN1_BMPSTRING_it
 T ASN1_BMPSTRING_new
 T ASN1_bn_print
-R ASN1_BOOLEAN_it
+D ASN1_BOOLEAN_it
 T ASN1_check_infinite_end
 T ASN1_const_check_infinite_end
 T asn1_const_Finish
@@ -65,24 +64,24 @@ T asn1_enc_restore
 T asn1_enc_save
 T ASN1_ENUMERATED_free
 T ASN1_ENUMERATED_get
-R ASN1_ENUMERATED_it
+D ASN1_ENUMERATED_it
 T ASN1_ENUMERATED_new
 T ASN1_ENUMERATED_set
 T ASN1_ENUMERATED_to_BN
 T asn1_ex_c2i
 T asn1_ex_i2c
-R ASN1_FBOOLEAN_it
+D ASN1_FBOOLEAN_it
 T asn1_Finish
 T ASN1_GENERALIZEDTIME_adj
 T ASN1_GENERALIZEDTIME_check
 T ASN1_GENERALIZEDTIME_free
-R ASN1_GENERALIZEDTIME_it
+D ASN1_GENERALIZEDTIME_it
 T ASN1_GENERALIZEDTIME_new
 T ASN1_GENERALIZEDTIME_print
 T ASN1_GENERALIZEDTIME_set
 T ASN1_GENERALIZEDTIME_set_string
 T ASN1_GENERALSTRING_free
-R ASN1_GENERALSTRING_it
+D ASN1_GENERALSTRING_it
 T ASN1_GENERALSTRING_new
 T ASN1_generate_nconf
 T ASN1_generate_v3
@@ -93,13 +92,13 @@ T asn1_GetSequence
 T ASN1_i2d_bio
 T ASN1_i2d_fp
 T ASN1_IA5STRING_free
-R ASN1_IA5STRING_it
+D ASN1_IA5STRING_it
 T ASN1_IA5STRING_new
 T ASN1_INTEGER_cmp
 T ASN1_INTEGER_dup
 T ASN1_INTEGER_free
 T ASN1_INTEGER_get
-R ASN1_INTEGER_it
+D ASN1_INTEGER_it
 T ASN1_INTEGER_new
 T ASN1_INTEGER_set
 T ASN1_INTEGER_to_BN
@@ -127,18 +126,18 @@ T ASN1_item_verify
 T ASN1_mbstring_copy
 T ASN1_mbstring_ncopy
 T ASN1_NULL_free
-R ASN1_NULL_it
+D ASN1_NULL_it
 T ASN1_NULL_new
 T ASN1_OBJECT_create
 T ASN1_OBJECT_free
-R ASN1_OBJECT_it
+D ASN1_OBJECT_it
 T ASN1_OBJECT_new
 T ASN1_object_size
 T ASN1_OCTET_STRING_cmp
 T ASN1_OCTET_STRING_dup
 T ASN1_OCTET_STRING_free
-R ASN1_OCTET_STRING_it
-R ASN1_OCTET_STRING_NDEF_it
+D ASN1_OCTET_STRING_it
+D ASN1_OCTET_STRING_NDEF_it
 T ASN1_OCTET_STRING_new
 T ASN1_OCTET_STRING_set
 T ASN1_pack_string
@@ -159,21 +158,22 @@ T ASN1_PCTX_set_str_flags
 T ASN1_primitive_free
 T ASN1_primitive_new
 T ASN1_PRINTABLE_free
-R ASN1_PRINTABLE_it
+D ASN1_PRINTABLE_it
 T ASN1_PRINTABLE_new
 T ASN1_PRINTABLESTRING_free
-R ASN1_PRINTABLESTRING_it
+D ASN1_PRINTABLESTRING_it
 T ASN1_PRINTABLESTRING_new
 T ASN1_PRINTABLE_type
 T ASN1_put_eoc
 T ASN1_put_object
 T ASN1_seq_pack
-R ASN1_SEQUENCE_ANY_it
-R ASN1_SEQUENCE_it
+D ASN1_SEQUENCE_ANY_it
+D ASN1_SEQUENCE_it
 T ASN1_seq_unpack
-R ASN1_SET_ANY_it
+D ASN1_SET_ANY_it
 T asn1_set_choice_selector
 T ASN1_sign
+T ASN1_STRING_clear_free
 T ASN1_STRING_cmp
 T ASN1_STRING_copy
 T ASN1_STRING_data
@@ -198,11 +198,11 @@ T ASN1_STRING_to_UTF8
 T ASN1_STRING_type
 T ASN1_STRING_type_new
 T ASN1_T61STRING_free
-R ASN1_T61STRING_it
+D ASN1_T61STRING_it
 T ASN1_T61STRING_new
 T ASN1_tag2bit
 T ASN1_tag2str
-R ASN1_TBOOLEAN_it
+D ASN1_TBOOLEAN_it
 T ASN1_template_d2i
 T ASN1_template_free
 T ASN1_template_i2d
@@ -211,7 +211,7 @@ T asn1_template_print_ctx
 T ASN1_TIME_adj
 T ASN1_TIME_check
 T ASN1_TIME_free
-R ASN1_TIME_it
+D ASN1_TIME_it
 T ASN1_TIME_new
 T ASN1_TIME_print
 T ASN1_TIME_set
@@ -228,7 +228,7 @@ T ASN1_TYPE_set1
 T ASN1_TYPE_set_int_octetstring
 T ASN1_TYPE_set_octetstring
 T ASN1_UNIVERSALSTRING_free
-R ASN1_UNIVERSALSTRING_it
+D ASN1_UNIVERSALSTRING_it
 T ASN1_UNIVERSALSTRING_new
 T ASN1_UNIVERSALSTRING_to_string
 T ASN1_unpack_string
@@ -236,30 +236,33 @@ T ASN1_UTCTIME_adj
 T ASN1_UTCTIME_check
 T ASN1_UTCTIME_cmp_time_t
 T ASN1_UTCTIME_free
-R ASN1_UTCTIME_it
+D ASN1_UTCTIME_it
 T ASN1_UTCTIME_new
 T ASN1_UTCTIME_print
 T ASN1_UTCTIME_set
 T ASN1_UTCTIME_set_string
 T ASN1_UTF8STRING_free
-R ASN1_UTF8STRING_it
+D ASN1_UTF8STRING_it
 T ASN1_UTF8STRING_new
 T ASN1_verify
 R ASN1_version
 T ASN1_VISIBLESTRING_free
-R ASN1_VISIBLESTRING_it
+D ASN1_VISIBLESTRING_it
 T ASN1_VISIBLESTRING_new
 U __assert_fail@@GLIBC_2.0
-U AssertMsgImplementation
+U atan2f@@GLIBC_2.0
+U atan2@@GLIBC_2.0
 U atan@@GLIBC_2.0
 T AUTHORITY_INFO_ACCESS_free
-R AUTHORITY_INFO_ACCESS_it
+D AUTHORITY_INFO_ACCESS_it
 T AUTHORITY_INFO_ACCESS_new
 T AUTHORITY_KEYID_free
-R AUTHORITY_KEYID_it
+D AUTHORITY_KEYID_it
 T AUTHORITY_KEYID_new
+U backtrace@@GLIBC_2.1
+U backtrace_symbols@@GLIBC_2.1
 T BASIC_CONSTRAINTS_free
-R BASIC_CONSTRAINTS_it
+D BASIC_CONSTRAINTS_it
 T BASIC_CONSTRAINTS_new
 T BF_cbc_encrypt
 T BF_cfb64_encrypt
@@ -270,7 +273,7 @@ T BF_ofb64_encrypt
 T BF_options
 T BF_set_key
 R BF_version
-R BIGNUM_it
+D BIGNUM_it
 U bind@@GLIBC_2.0
 T BIO_asn1_get_prefix
 T BIO_asn1_get_suffix
@@ -371,6 +374,7 @@ T BN_clear_free
 T BN_cmp
 T bn_cmp_part_words
 T bn_cmp_words
+T BN_consttime_swap
 T BN_copy
 T BN_CTX_end
 T BN_CTX_free
@@ -520,8 +524,6 @@ T BUF_strdup
 T BUF_strlcat
 T BUF_strlcpy
 T BUF_strndup
-U BWritingFatalMiniDump
-U BWritingMiniDump
 T c2i_ASN1_BIT_STRING
 T c2i_ASN1_INTEGER
 T c2i_ASN1_OBJECT
@@ -556,10 +558,10 @@ R CAST_S_table5
 R CAST_S_table6
 R CAST_S_table7
 R CAST_version
-R CBIGNUM_it
-U ceil@@GLIBC_2.0
+D CBIGNUM_it
+U ceilf@@GLIBC_2.0
 T CERTIFICATEPOLICIES_free
-R CERTIFICATEPOLICIES_it
+D CERTIFICATEPOLICIES_it
 T CERTIFICATEPOLICIES_new
 U chdir@@GLIBC_2.0
 T check_defer
@@ -570,7 +572,7 @@ U clock_gettime@@GLIBC_2.2
 U clock@@GLIBC_2.0
 U closedir@@GLIBC_2.0
 U close@@GLIBC_2.0
-R cmac_asn1_meth
+D cmac_asn1_meth
 T CMAC_CTX_cleanup
 T CMAC_CTX_copy
 T CMAC_CTX_free
@@ -578,7 +580,7 @@ T CMAC_CTX_get0_cipher_ctx
 T CMAC_CTX_new
 T CMAC_Final
 T CMAC_Init
-R cmac_pkey_meth
+D cmac_pkey_meth
 T CMAC_resume
 T CMAC_Update
 T CMS_add0_cert
@@ -594,14 +596,14 @@ T CMS_add1_signer
 T CMS_add_simple_smimecap
 T CMS_add_smimecap
 T CMS_add_standard_smimecap
-R CMS_Attributes_Sign_it
-R CMS_Attributes_Verify_it
-R CMS_AuthenticatedData_it
-R CMS_CertificateChoices_it
-R CMS_CompressedData_it
+D CMS_Attributes_Sign_it
+D CMS_Attributes_Verify_it
+D CMS_AuthenticatedData_it
+D CMS_CertificateChoices_it
+D CMS_CompressedData_it
 T cms_content_bio
 T CMS_ContentInfo_free
-R CMS_ContentInfo_it
+D CMS_ContentInfo_it
 T CMS_ContentInfo_new
 T CMS_ContentInfo_print_ctx
 T cms_Data_create
@@ -613,17 +615,17 @@ T cms_DigestAlgorithm_set
 T cms_DigestedData_create
 T cms_DigestedData_do_final
 T cms_DigestedData_init_bio
-R CMS_DigestedData_it
-R CMS_EncapsulatedContentInfo_it
-R CMS_EncryptedContentInfo_it
+D CMS_DigestedData_it
+D CMS_EncapsulatedContentInfo_it
+D CMS_EncryptedContentInfo_it
 T cms_EncryptedContent_init
 T cms_EncryptedContent_init_bio
 T cms_EncryptedData_init_bio
-R CMS_EncryptedData_it
+D CMS_EncryptedData_it
 T CMS_EncryptedData_set1_key
 T CMS_EnvelopedData_create
 T cms_EnvelopedData_init_bio
-R CMS_EnvelopedData_it
+D CMS_EnvelopedData_it
 T CMS_get0_content
 T CMS_get0_eContentType
 T cms_get0_enveloped
@@ -634,26 +636,26 @@ T CMS_get0_type
 T CMS_get1_certs
 T CMS_get1_crls
 T CMS_is_detached
-R CMS_IssuerAndSerialNumber_it
-R CMS_KEKIdentifier_it
-R CMS_KEKRecipientInfo_it
-R CMS_KeyAgreeRecipientIdentifier_it
-R CMS_KeyAgreeRecipientInfo_it
-R CMS_KeyTransRecipientInfo_it
-R CMS_OriginatorIdentifierOrKey_it
-R CMS_OriginatorInfo_it
-R CMS_OriginatorPublicKey_it
-R CMS_OtherCertificateFormat_it
-R CMS_OtherKeyAttribute_it
-R CMS_OtherRecipientInfo_it
-R CMS_OtherRevocationInfoFormat_it
-R CMS_PasswordRecipientInfo_it
-R CMS_Receipt_it
-R CMS_ReceiptRequest_it
-R CMS_ReceiptsFrom_it
-R CMS_RecipientEncryptedKey_it
+D CMS_IssuerAndSerialNumber_it
+D CMS_KEKIdentifier_it
+D CMS_KEKRecipientInfo_it
+D CMS_KeyAgreeRecipientIdentifier_it
+D CMS_KeyAgreeRecipientInfo_it
+D CMS_KeyTransRecipientInfo_it
+D CMS_OriginatorIdentifierOrKey_it
+D CMS_OriginatorInfo_it
+D CMS_OriginatorPublicKey_it
+D CMS_OtherCertificateFormat_it
+D CMS_OtherKeyAttribute_it
+D CMS_OtherRecipientInfo_it
+D CMS_OtherRevocationInfoFormat_it
+D CMS_PasswordRecipientInfo_it
+D CMS_Receipt_it
+D CMS_ReceiptRequest_it
+D CMS_ReceiptsFrom_it
+D CMS_RecipientEncryptedKey_it
 T CMS_RecipientInfo_decrypt
-R CMS_RecipientInfo_it
+D CMS_RecipientInfo_it
 T CMS_RecipientInfo_kekri_get0_id
 T CMS_RecipientInfo_kekri_id_cmp
 T CMS_RecipientInfo_ktri_cert_cmp
@@ -664,8 +666,8 @@ T CMS_RecipientInfo_set0_key
 T CMS_RecipientInfo_set0_password
 T CMS_RecipientInfo_set0_pkey
 T CMS_RecipientInfo_type
-R CMS_RecipientKeyIdentifier_it
-R CMS_RevocationInfoChoice_it
+D CMS_RecipientKeyIdentifier_it
+D CMS_RevocationInfoChoice_it
 T CMS_set1_eContentType
 T cms_set1_SignerIdentifier
 T CMS_set1_signers_certs
@@ -677,7 +679,7 @@ T CMS_signed_add1_attr_by_txt
 T cms_SignedData_final
 T CMS_SignedData_init
 T cms_SignedData_init_bio
-R CMS_SignedData_it
+D CMS_SignedData_it
 T CMS_signed_delete_attr
 T CMS_signed_get0_data_by_OBJ
 T CMS_signed_get_attr
@@ -686,11 +688,11 @@ T CMS_signed_get_attr_by_OBJ
 T CMS_signed_get_attr_count
 T cms_SignerIdentifier_cert_cmp
 T cms_SignerIdentifier_get0_signer_id
-R CMS_SignerIdentifier_it
+D CMS_SignerIdentifier_it
 T CMS_SignerInfo_cert_cmp
 T CMS_SignerInfo_get0_algs
 T CMS_SignerInfo_get0_signer_id
-R CMS_SignerInfo_it
+D CMS_SignerInfo_it
 T CMS_SignerInfo_set1_signer_cert
 T CMS_SignerInfo_sign
 T CMS_SignerInfo_verify
@@ -706,12 +708,6 @@ T CMS_unsigned_get_attr
 T CMS_unsigned_get_attr_by_NID
 T CMS_unsigned_get_attr_by_OBJ
 T CMS_unsigned_get_attr_count
-T COMP_compress_block
-T COMP_CTX_free
-T COMP_CTX_new
-T COMP_expand_block
-T COMP_zlib
-T COMP_zlib_cleanup
 T _CONF_add_string
 R CONF_def_version
 T CONF_dump_bio
@@ -750,21 +746,10 @@ T CONF_set_default_method
 T CONF_set_nconf
 R CONF_version
 U connect@@GLIBC_2.0
-U Coroutine_Continue
-U Coroutine_Create
-U Coroutine_DebugBreak
-U Coroutine_IsAddressInOurStack
-U Coroutine_ReleaseThreadMemory
-U Coroutine_ValidateGlobals
-U Coroutine_YieldToMain
 U cos@@GLIBC_2.0
-T crc32
-T crc32_combine
-T crc32_combine64
 T CreateInterface
-U CreateVProfile
 T CRL_DIST_POINTS_free
-R CRL_DIST_POINTS_it
+D CRL_DIST_POINTS_it
 T CRL_DIST_POINTS_new
 T CRYPTO_add_lock
 T CRYPTO_cbc128_decrypt
@@ -828,6 +813,7 @@ T CRYPTO_is_mem_check_on
 T CRYPTO_lock
 T CRYPTO_malloc
 T CRYPTO_malloc_locked
+T CRYPTO_memcmp
 T CRYPTO_mem_ctrl
 T CRYPTO_mem_leaks
 T CRYPTO_mem_leaks_cb
@@ -866,6 +852,7 @@ T CRYPTO_THREADID_set_callback
 T CRYPTO_THREADID_set_numeric
 T CRYPTO_THREADID_set_pointer
 T CRYPTO_xts128_encrypt
+U ctime_r@@GLIBC_2.0
 U __ctype_b_loc@@GLIBC_2.3
 U __ctype_tolower_loc@@GLIBC_2.3
 U __cxa_allocate_exception@@CXXABI_1.3
@@ -1046,7 +1033,8 @@ T d2i_X509_REQ_INFO
 T d2i_X509_REVOKED
 T d2i_X509_SIG
 T d2i_X509_VAL
-U DebugStatsSystem
+U __daylight@@GLIBC_2.0
+U daylight@@GLIBC_2.0
 D default_pctx
 T DES_cfb64_encrypt
 T DES_cfb_encrypt
@@ -1072,7 +1060,7 @@ T DES_set_key_unchecked
 T DES_set_odd_parity
 T DES_SPtrans
 T DES_xcbc_encrypt
-R dh_asn1_meth
+D dh_asn1_meth
 T DH_check
 T DH_check_pub_key
 T DH_compute_key
@@ -1086,9 +1074,9 @@ T DH_new
 T DH_new_method
 T DH_OpenSSL
 T DHparams_dup
-R DHparams_it
+D DHparams_it
 T DHparams_print
-R dh_pkey_meth
+D dh_pkey_meth
 T DH_set_default_method
 T DH_set_ex_data
 T DH_set_method
@@ -1096,15 +1084,15 @@ T DH_size
 T DH_up_ref
 R DH_version
 T DIRECTORYSTRING_free
-R DIRECTORYSTRING_it
+D DIRECTORYSTRING_it
 T DIRECTORYSTRING_new
 T DISPLAYTEXT_free
-R DISPLAYTEXT_it
+D DISPLAYTEXT_it
 T DISPLAYTEXT_new
 T DIST_POINT_free
-R DIST_POINT_it
+D DIST_POINT_it
 T DIST_POINT_NAME_free
-R DIST_POINT_NAME_it
+D DIST_POINT_NAME_it
 T DIST_POINT_NAME_new
 T DIST_POINT_new
 T DIST_POINT_set_dpname
@@ -1113,11 +1101,11 @@ U dladdr@@GLIBC_2.0
 U dlclose@@GLIBC_2.0
 U dlerror@@GLIBC_2.0
 U dl_iterate_phdr@@GLIBC_2.2.4
+U dlmopen@@GLIBC_2.3.4
 U dlopen@@GLIBC_2.1
 U dlsym@@GLIBC_2.0
-U _DMsg
 T do_dtls1_write
-R dsa_asn1_meths
+D dsa_asn1_meths
 T dsa_builtin_paramgen
 T DSA_do_sign
 T DSA_do_verify
@@ -1132,16 +1120,16 @@ T DSA_new
 T DSA_new_method
 T DSA_OpenSSL
 T DSAparams_dup
-R DSAparams_it
-R dsa_pkey_meth
-R DSAPrivateKey_it
-R dsa_pub_internal_it
-R DSAPublicKey_it
+D DSAparams_it
+D dsa_pkey_meth
+D DSAPrivateKey_it
+D dsa_pub_internal_it
+D DSAPublicKey_it
 T DSA_set_default_method
 T DSA_set_ex_data
 T DSA_set_method
 T DSA_SIG_free
-R DSA_SIG_it
+D DSA_SIG_it
 T DSA_sign
 T DSA_SIG_new
 T DSA_sign_setup
@@ -1192,7 +1180,9 @@ T dtls1_get_record
 T dtls1_get_timeout
 T dtls1_handle_timeout
 T dtls1_heartbeat
+T dtls1_hm_fragment_free
 T dtls1_is_timer_expired
+T dtls1_link_min_mtu
 T dtls1_listen
 T dtls1_min_mtu
 T dtls1_new
@@ -1237,7 +1227,7 @@ T ECDSA_set_default_method
 T ECDSA_set_ex_data
 T ECDSA_set_method
 T ECDSA_SIG_free
-R ECDSA_SIG_it
+D ECDSA_SIG_it
 T ECDSA_sign
 T ECDSA_SIG_new
 T ECDSA_sign_ex
@@ -1361,7 +1351,7 @@ T EC_GROUP_set_curve_name
 T EC_GROUP_set_generator
 T EC_GROUP_set_point_conversion_form
 T EC_GROUP_set_seed
-R eckey_asn1_meth
+D eckey_asn1_meth
 T EC_KEY_check_key
 T EC_KEY_clear_flags
 T EC_KEY_copy
@@ -1392,13 +1382,13 @@ T EC_KEY_set_public_key_affine_coordinates
 T EC_KEY_up_ref
 T EC_METHOD_get_field_type
 T ECPARAMETERS_free
-R ECPARAMETERS_it
+D ECPARAMETERS_it
 T ECPARAMETERS_new
 T ECParameters_print
 T ECParameters_print_fp
-R ec_pkey_meth
+D ec_pkey_meth
 T ECPKPARAMETERS_free
-R ECPKPARAMETERS_it
+D ECPKPARAMETERS_it
 T ECPKPARAMETERS_new
 T ECPKParameters_print
 T ECPKParameters_print_fp
@@ -1434,14 +1424,15 @@ T EC_POINT_set_to_infinity
 T EC_POINTs_make_affine
 T EC_POINTs_mul
 T EC_PRIVATEKEY_free
-R EC_PRIVATEKEY_it
+D EC_PRIVATEKEY_it
 T EC_PRIVATEKEY_new
+R EC_version
 T ec_wNAF_have_precompute_mult
 T ec_wNAF_mul
 T ec_wNAF_precompute_mult
 A _edata
 T EDIPARTYNAME_free
-R EDIPARTYNAME_it
+D EDIPARTYNAME_it
 T EDIPARTYNAME_new
 A _end
 T ENGINE_add
@@ -1581,6 +1572,9 @@ T ENGINE_unregister_pkey_meths
 T ENGINE_unregister_RAND
 T ENGINE_unregister_RSA
 T ENGINE_up_ref
+U epoll_create@@GLIBC_2.3.2
+U epoll_ctl@@GLIBC_2.3.2
+U epoll_wait@@GLIBC_2.3.2
 T ERR_add_error_data
 T ERR_add_error_vdata
 T ERR_clear_error
@@ -1602,7 +1596,6 @@ T ERR_load_BIO_strings
 T ERR_load_BN_strings
 T ERR_load_BUF_strings
 T ERR_load_CMS_strings
-T ERR_load_COMP_strings
 T ERR_load_CONF_strings
 T ERR_load_crypto_strings
 T ERR_load_CRYPTO_strings
@@ -1629,7 +1622,6 @@ T ERR_load_UI_strings
 T ERR_load_X509_strings
 T ERR_load_X509V3_strings
 U __errno_location@@GLIBC_2.0
-U Error
 T ERR_peek_error
 T ERR_peek_error_line
 T ERR_peek_error_line_data
@@ -1802,10 +1794,6 @@ T EVP_EncryptUpdate
 T EVP_get_cipherbyname
 T EVP_get_digestbyname
 T EVP_get_pw_prompt
-T EVP_idea_cbc
-T EVP_idea_cfb64
-T EVP_idea_ecb
-T EVP_idea_ofb
 T EVP_md4
 T EVP_md5
 T EVP_MD_block_size
@@ -1975,11 +1963,13 @@ U _exit@@GLIBC_2.0
 U exit@@GLIBC_2.0
 U exp@@GLIBC_2.0
 T EXTENDED_KEY_USAGE_free
-R EXTENDED_KEY_USAGE_it
+D EXTENDED_KEY_USAGE_it
 T EXTENDED_KEY_USAGE_new
+U fchmod@@GLIBC_2.0
+U fchown@@GLIBC_2.0
 U fclose@@GLIBC_2.1
 U fcntl@@GLIBC_2.0
-U fdopen@@GLIBC_2.1
+U fdatasync@@GLIBC_2.0
 U feof@@GLIBC_2.0
 U ferror@@GLIBC_2.0
 U fflush@@GLIBC_2.0
@@ -1990,6 +1980,7 @@ T _fini
 U flock@@GLIBC_2.0
 U floorf@@GLIBC_2.0
 U floor@@GLIBC_2.0
+U fmod@@GLIBC_2.0
 U fopen64@@GLIBC_2.1
 U fopen@@GLIBC_2.1
 U fork@@GLIBC_2.0
@@ -2004,16 +1995,14 @@ U freopen@@GLIBC_2.0
 U frexp@@GLIBC_2.0
 U fseek@@GLIBC_2.0
 U fseeko64@@GLIBC_2.1
+U fsync@@GLIBC_2.0
 U ftell@@GLIBC_2.0
-U ftello64@@GLIBC_2.1
 U ftruncate64@@GLIBC_2.1
 U ftruncate@@GLIBC_2.0
 U futimes@@GLIBC_2.3
 U fwrite@@GLIBC_2.0
 U __fxstat64@@GLIBC_2.2
 U __fxstat@@GLIBC_2.0
-U g_cBadCycleCountReceived
-U g_ClockSpeed
 T gcm_ghash_4bit_mmx
 T gcm_ghash_4bit_x86
 T gcm_ghash_clmul
@@ -2021,64 +2010,46 @@ T gcm_gmult_4bit_mmx
 T gcm_gmult_4bit_x86
 T gcm_gmult_clmul
 T gcm_init_clmul
-U g_dwClockSpeed
 T GENERAL_NAME_cmp
 T GENERAL_NAME_dup
 T GENERAL_NAME_free
 T GENERAL_NAME_get0_otherName
 T GENERAL_NAME_get0_value
-R GENERAL_NAME_it
+D GENERAL_NAME_it
 T GENERAL_NAME_new
 T GENERAL_NAME_print
 T GENERAL_NAME_set0_othername
 T GENERAL_NAME_set0_value
 T GENERAL_NAMES_free
-R GENERAL_NAMES_it
+D GENERAL_NAMES_it
 T GENERAL_NAMES_new
 T GENERAL_SUBTREE_free
-R GENERAL_SUBTREE_it
+D GENERAL_SUBTREE_it
 T GENERAL_SUBTREE_new
 U getaddrinfo@@GLIBC_2.0
-U GetAvailableRAM
-U GetCPUInformation
-U GetCrashHandlerFactory
-T get_crc_table
-U GetCRunTimeVersion
 U getcwd@@GLIBC_2.0
 U getenv@@GLIBC_2.0
+U geteuid@@GLIBC_2.0
 U gethostbyname@@GLIBC_2.0
 U gethostname@@GLIBC_2.0
 U getifaddrs@@GLIBC_2.3
-U GetInstalledRAM
-U GetLocalHostname
-U GetNameFromOSType
 U getnameinfo@@GLIBC_2.1
-U GetOSDetailString
-U GetOSType
 U getpeername@@GLIBC_2.0
 U getpid@@GLIBC_2.0
-U GetPlatformFromOS
-U GetPlatformName
-U GetPortableOsVersionInformation
-U GetPortableSystemInformation
 U getpwuid@@GLIBC_2.0
 U getsockname@@GLIBC_2.0
 U getsockopt@@GLIBC_2.0
-U GetSpewOutputFunc
 U gettimeofday@@GLIBC_2.0
 U getuid@@GLIBC_2.0
 w __gmon_start__
+U gmtime@@GLIBC_2.0
 U gmtime_r@@GLIBC_2.0
-U g_pMemAllocSteam
-U g_ulLastCycleSample
-U g_VProfile
-U g_VProfManager
-U g_VProfProfilesRunningCount
+U gnu_get_libc_version@@GLIBC_2.1
 U __gxx_personality_v0@@CXXABI_1.3
 U __h_errno_location@@GLIBC_2.0
 T hex_to_string
 T HMAC
-R hmac_asn1_meth
+D hmac_asn1_meth
 T HMAC_CTX_cleanup
 T HMAC_CTX_copy
 T HMAC_CTX_init
@@ -2086,10 +2057,8 @@ T HMAC_CTX_set_flags
 T HMAC_Final
 T HMAC_Init
 T HMAC_Init_ex
-R hmac_pkey_meth
+D hmac_pkey_meth
 T HMAC_Update
-U htonl@@GLIBC_2.0
-U htons@@GLIBC_2.0
 T i2a_ACCESS_DESCRIPTION
 T i2a_ASN1_INTEGER
 T i2a_ASN1_OBJECT
@@ -2274,45 +2243,20 @@ T i2t_ASN1_OBJECT
 T i2v_ASN1_BIT_STRING
 T i2v_GENERAL_NAME
 T i2v_GENERAL_NAMES
-T idea_cbc_encrypt
-T idea_cfb64_encrypt
-T idea_ecb_encrypt
-T idea_encrypt
-T idea_ofb64_encrypt
-T idea_options
-T idea_set_decrypt_key
-T idea_set_encrypt_key
-R IDEA_version
 U inet_aton@@GLIBC_2.0
-T inflate
-T inflateCopy
-R inflate_copyright
-T inflateEnd
-T inflateGetHeader
-T inflateInit_
-T inflateInit2_
-T inflateMark
-T inflatePrime
-T inflateReset
-T inflateReset2
-T inflateSetDictionary
-T inflateSync
-T inflateSyncPoint
-T inflateUndermine
 T _init
 T int_rsa_verify
 U ioctl@@GLIBC_2.0
-U Is64BitOS
 U isalnum@@GLIBC_2.0
 U isalpha@@GLIBC_2.0
 U isprint@@GLIBC_2.0
 U isspace@@GLIBC_2.0
 T ISSUING_DIST_POINT_free
-R ISSUING_DIST_POINT_it
+D ISSUING_DIST_POINT_it
 T ISSUING_DIST_POINT_new
+U iswspace@@GLIBC_2.0
 U isxdigit@@GLIBC_2.0
 w _Jv_RegisterClasses
-U KeyValuesSystemSteam
 U kill@@GLIBC_2.0
 U lchown@@GLIBC_2.0
 U ldexp@@GLIBC_2.0
@@ -2332,16 +2276,18 @@ U link@@GLIBC_2.0
 U listen@@GLIBC_2.0
 U localeconv@@GLIBC_2.2
 U localtime@@GLIBC_2.0
-U Log
+U localtime_r@@GLIBC_2.0
 U log10@@GLIBC_2.0
+U logf@@GLIBC_2.0
 U log@@GLIBC_2.0
-R LONG_it
+D LONG_it
 U longjmp@@GLIBC_2.0
 U lseek64@@GLIBC_2.2
 U lseek@@GLIBC_2.0
 U __lxstat64@@GLIBC_2.2
 U __lxstat@@GLIBC_2.0
 U malloc@@GLIBC_2.0
+U malloc_usable_size@@GLIBC_2.0
 T md4_block_data_order
 T MD4_Final
 T MD4_Init
@@ -2366,16 +2312,19 @@ U mkdir@@GLIBC_2.0
 U mkfifo@@GLIBC_2.0
 U mktemp@@GLIBC_2.0
 U mktime@@GLIBC_2.0
+U mmap64@@GLIBC_2.1
 U mmap@@GLIBC_2.0
 U modf@@GLIBC_2.0
 U mount@@GLIBC_2.0
-U Msg
+U mprotect@@GLIBC_2.0
+U mremap@@GLIBC_2.0
 U munmap@@GLIBC_2.0
 T name_cmp
 T NAME_CONSTRAINTS_check
 T NAME_CONSTRAINTS_free
-R NAME_CONSTRAINTS_it
+D NAME_CONSTRAINTS_it
 T NAME_CONSTRAINTS_new
+U nanosleep@@GLIBC_2.0
 T NCONF_default
 T NCONF_dump_bio
 T NCONF_dump_fp
@@ -2390,22 +2339,21 @@ T NCONF_load_fp
 T NCONF_new
 T NCONF_WIN32
 T NETSCAPE_CERT_SEQUENCE_free
-R NETSCAPE_CERT_SEQUENCE_it
+D NETSCAPE_CERT_SEQUENCE_it
 T NETSCAPE_CERT_SEQUENCE_new
 T NETSCAPE_SPKAC_free
-R NETSCAPE_SPKAC_it
+D NETSCAPE_SPKAC_it
 T NETSCAPE_SPKAC_new
 T NETSCAPE_SPKI_free
-R NETSCAPE_SPKI_it
+D NETSCAPE_SPKI_it
 T NETSCAPE_SPKI_new
 T NETSCAPE_SPKI_sign
 T NETSCAPE_SPKI_verify
+U nice@@GLIBC_2.0
 T NOTICEREF_free
-R NOTICEREF_it
+D NOTICEREF_it
 T NOTICEREF_new
 T n_ssl3_mac
-U ntohl@@GLIBC_2.0
-U ntohs@@GLIBC_2.0
 T o2i_ECPublicKey
 T OBJ_add_object
 T OBJ_add_sigid
@@ -2440,49 +2388,49 @@ T OBJ_sn2nid
 T OBJ_txt2nid
 T OBJ_txt2obj
 T OCSP_BASICRESP_free
-R OCSP_BASICRESP_it
+D OCSP_BASICRESP_it
 T OCSP_BASICRESP_new
 T OCSP_CERTID_free
-R OCSP_CERTID_it
+D OCSP_CERTID_it
 T OCSP_CERTID_new
 T OCSP_CERTSTATUS_free
-R OCSP_CERTSTATUS_it
+D OCSP_CERTSTATUS_it
 T OCSP_CERTSTATUS_new
 T OCSP_CRLID_free
-R OCSP_CRLID_it
+D OCSP_CRLID_it
 T OCSP_CRLID_new
 T OCSP_ONEREQ_free
-R OCSP_ONEREQ_it
+D OCSP_ONEREQ_it
 T OCSP_ONEREQ_new
 T OCSP_REQINFO_free
-R OCSP_REQINFO_it
+D OCSP_REQINFO_it
 T OCSP_REQINFO_new
 T OCSP_REQUEST_free
-R OCSP_REQUEST_it
+D OCSP_REQUEST_it
 T OCSP_REQUEST_new
 T OCSP_RESPBYTES_free
-R OCSP_RESPBYTES_it
+D OCSP_RESPBYTES_it
 T OCSP_RESPBYTES_new
 T OCSP_RESPDATA_free
-R OCSP_RESPDATA_it
+D OCSP_RESPDATA_it
 T OCSP_RESPDATA_new
 T OCSP_RESPID_free
-R OCSP_RESPID_it
+D OCSP_RESPID_it
 T OCSP_RESPID_new
 T OCSP_RESPONSE_free
-R OCSP_RESPONSE_it
+D OCSP_RESPONSE_it
 T OCSP_RESPONSE_new
 T OCSP_REVOKEDINFO_free
-R OCSP_REVOKEDINFO_it
+D OCSP_REVOKEDINFO_it
 T OCSP_REVOKEDINFO_new
 T OCSP_SERVICELOC_free
-R OCSP_SERVICELOC_it
+D OCSP_SERVICELOC_it
 T OCSP_SERVICELOC_new
 T OCSP_SIGNATURE_free
-R OCSP_SIGNATURE_it
+D OCSP_SIGNATURE_it
 T OCSP_SIGNATURE_new
 T OCSP_SINGLERESP_free
-R OCSP_SINGLERESP_it
+D OCSP_SINGLERESP_it
 T OCSP_SINGLERESP_new
 U open64@@GLIBC_2.2
 U opendir@@GLIBC_2.0
@@ -2516,20 +2464,31 @@ T OPENSSL_uni2asc
 T OPENSSL_wipe_cpu
 R OSSL_DES_version
 R OSSL_libdes_version
-U OSTypesAreCompatible
 T OTHERNAME_cmp
 T OTHERNAME_free
-R OTHERNAME_it
+D OTHERNAME_it
 T OTHERNAME_new
 T PBE2PARAM_free
-R PBE2PARAM_it
+D PBE2PARAM_it
 T PBE2PARAM_new
 T PBEPARAM_free
-R PBEPARAM_it
+D PBEPARAM_it
 T PBEPARAM_new
 T PBKDF2PARAM_free
-R PBKDF2PARAM_it
+D PBKDF2PARAM_it
 T PBKDF2PARAM_new
+U pclose@@GLIBC_2.1
+B pcre_callout
+T pcre_compile
+T pcre_compile2
+T pcre_config
+T pcre_exec
+D pcre_free
+T pcre_fullinfo
+D pcre_malloc
+D pcre_stack_free
+B pcre_stack_guard
+D pcre_stack_malloc
 T PEM_ASN1_read
 T PEM_ASN1_read_bio
 T PEM_ASN1_write
@@ -2654,22 +2613,22 @@ T PEM_X509_INFO_write_bio
 U pipe@@GLIBC_2.0
 T pitem_free
 T pitem_new
-R PKCS12_AUTHSAFES_it
+D PKCS12_AUTHSAFES_it
 T PKCS12_BAGS_free
-R PKCS12_BAGS_it
+D PKCS12_BAGS_it
 T PKCS12_BAGS_new
 T PKCS12_certbag2x509
 T PKCS12_certbag2x509crl
 T PKCS12_decrypt_skey
 T PKCS12_free
-R PKCS12_it
+D PKCS12_it
 T PKCS12_item_decrypt_d2i
 T PKCS12_item_i2d_encrypt
 T PKCS12_item_pack_safebag
 T PKCS12_key_gen_asc
 T PKCS12_key_gen_uni
 T PKCS12_MAC_DATA_free
-R PKCS12_MAC_DATA_it
+D PKCS12_MAC_DATA_it
 T PKCS12_MAC_DATA_new
 T PKCS12_MAKE_KEYBAG
 T PKCS12_MAKE_SHKEYBAG
@@ -2681,9 +2640,9 @@ T PKCS12_PBE_add
 T PKCS12_pbe_crypt
 T PKCS12_PBE_keyivgen
 T PKCS12_SAFEBAG_free
-R PKCS12_SAFEBAG_it
+D PKCS12_SAFEBAG_it
 T PKCS12_SAFEBAG_new
-R PKCS12_SAFEBAGS_it
+D PKCS12_SAFEBAGS_it
 T PKCS12_unpack_authsafes
 T PKCS12_unpack_p7data
 T PKCS12_unpack_p7encdata
@@ -2713,8 +2672,8 @@ T PKCS7_add_recipient_info
 T PKCS7_add_signature
 T PKCS7_add_signed_attribute
 T PKCS7_add_signer
-R PKCS7_ATTR_SIGN_it
-R PKCS7_ATTR_VERIFY_it
+D PKCS7_ATTR_SIGN_it
+D PKCS7_ATTR_VERIFY_it
 T PKCS7_cert_from_signer_info
 T PKCS7_content_new
 T PKCS7_ctrl
@@ -2724,17 +2683,17 @@ T PKCS7_dataInit
 T PKCS7_dataVerify
 T PKCS7_DIGEST_free
 T PKCS7_digest_from_attributes
-R PKCS7_DIGEST_it
+D PKCS7_DIGEST_it
 T PKCS7_DIGEST_new
 T PKCS7_dup
 T PKCS7_ENC_CONTENT_free
-R PKCS7_ENC_CONTENT_it
+D PKCS7_ENC_CONTENT_it
 T PKCS7_ENC_CONTENT_new
 T PKCS7_ENCRYPT_free
-R PKCS7_ENCRYPT_it
+D PKCS7_ENCRYPT_it
 T PKCS7_ENCRYPT_new
 T PKCS7_ENVELOPE_free
-R PKCS7_ENVELOPE_it
+D PKCS7_ENVELOPE_it
 T PKCS7_ENVELOPE_new
 T PKCS7_free
 T PKCS7_get_attribute
@@ -2744,14 +2703,14 @@ T PKCS7_get_signer_info
 T PKCS7_get_smimecap
 T PKCS7_ISSUER_AND_SERIAL_digest
 T PKCS7_ISSUER_AND_SERIAL_free
-R PKCS7_ISSUER_AND_SERIAL_it
+D PKCS7_ISSUER_AND_SERIAL_it
 T PKCS7_ISSUER_AND_SERIAL_new
-R PKCS7_it
+D PKCS7_it
 T PKCS7_new
 T PKCS7_print_ctx
 T PKCS7_RECIP_INFO_free
 T PKCS7_RECIP_INFO_get0_alg
-R PKCS7_RECIP_INFO_it
+D PKCS7_RECIP_INFO_it
 T PKCS7_RECIP_INFO_new
 T PKCS7_RECIP_INFO_set
 T PKCS7_set0_type_other
@@ -2763,14 +2722,14 @@ T PKCS7_set_signed_attributes
 T PKCS7_set_type
 T PKCS7_signatureVerify
 T PKCS7_SIGNED_free
-R PKCS7_SIGNED_it
+D PKCS7_SIGNED_it
 T PKCS7_SIGNED_new
 T PKCS7_SIGN_ENVELOPE_free
-R PKCS7_SIGN_ENVELOPE_it
+D PKCS7_SIGN_ENVELOPE_it
 T PKCS7_SIGN_ENVELOPE_new
 T PKCS7_SIGNER_INFO_free
 T PKCS7_SIGNER_INFO_get0_algs
-R PKCS7_SIGNER_INFO_it
+D PKCS7_SIGNER_INFO_it
 T PKCS7_SIGNER_INFO_new
 T PKCS7_SIGNER_INFO_set
 T PKCS7_SIGNER_INFO_sign
@@ -2781,48 +2740,37 @@ T PKCS8_encrypt
 T PKCS8_pkey_get0
 T PKCS8_pkey_set0
 T PKCS8_PRIV_KEY_INFO_free
-R PKCS8_PRIV_KEY_INFO_it
+D PKCS8_PRIV_KEY_INFO_it
 T PKCS8_PRIV_KEY_INFO_new
 T PKCS8_set_broken
 T PKEY_USAGE_PERIOD_free
-R PKEY_USAGE_PERIOD_it
+D PKEY_USAGE_PERIOD_it
 T PKEY_USAGE_PERIOD_new
-U Plat_ctime
-U Plat_daylight
-U Plat_FloatTime
-U Plat_GetCommandLine
-U PLAT_GetExecutablePath
-U Plat_gmtime
-U Plat_IsInDebugSession
-U Plat_localtime
-U Plat_MSTime
-U Plat_OutputDebugString
-U Plat_OutputDebugStringRaw
-U Plat_timegm
-U Plat_timezone
 T policy_cache_find_data
 T policy_cache_free
 T policy_cache_set
 T policy_cache_set_mapping
 T POLICY_CONSTRAINTS_free
-R POLICY_CONSTRAINTS_it
+D POLICY_CONSTRAINTS_it
 T POLICY_CONSTRAINTS_new
 T policy_data_free
 T policy_data_new
 T POLICYINFO_free
-R POLICYINFO_it
+D POLICYINFO_it
 T POLICYINFO_new
 T POLICY_MAPPING_free
-R POLICY_MAPPING_it
+D POLICY_MAPPING_it
 T POLICY_MAPPING_new
-R POLICY_MAPPINGS_it
+D POLICY_MAPPINGS_it
 T policy_node_cmp_new
 T policy_node_free
 T policy_node_match
 T POLICYQUALINFO_free
-R POLICYQUALINFO_it
+D POLICYQUALINFO_it
 T POLICYQUALINFO_new
 U poll@@GLIBC_2.0
+U popen@@GLIBC_2.1
+U powf@@GLIBC_2.0
 U pow@@GLIBC_2.0
 T pqueue_find
 T pqueue_free
@@ -2834,24 +2782,27 @@ T pqueue_peek
 T pqueue_pop
 T pqueue_print
 T pqueue_size
+U prctl@@GLIBC_2.0
+U pread64@@GLIBC_2.2
 U printf@@GLIBC_2.0
 T private_AES_set_decrypt_key
 T private_AES_set_encrypt_key
 T private_Camellia_set_key
 T private_RC4_set_key
 T PROXY_CERT_INFO_EXTENSION_free
-R PROXY_CERT_INFO_EXTENSION_it
+D PROXY_CERT_INFO_EXTENSION_it
 T PROXY_CERT_INFO_EXTENSION_new
 T PROXY_POLICY_free
-R PROXY_POLICY_it
+D PROXY_POLICY_it
 T PROXY_POLICY_new
 U pthread_attr_getschedparam@@GLIBC_2.0
 U pthread_attr_init@@GLIBC_2.1
 U pthread_attr_setschedparam@@GLIBC_2.0
-w pthread_cancel@@GLIBC_2.0
+U pthread_attr_setstacksize@@GLIBC_2.1
+U pthread_cancel@@GLIBC_2.0
 U pthread_condattr_destroy@@GLIBC_2.0
 U pthread_condattr_init@@GLIBC_2.0
-U pthread_condattr_setpshared@@GLIBC_2.2
+U pthread_condattr_setclock@@GLIBC_2.3.3
 U pthread_cond_broadcast@@GLIBC_2.3.2
 U pthread_cond_destroy@@GLIBC_2.3.2
 U pthread_cond_init@@GLIBC_2.3.2
@@ -2859,81 +2810,26 @@ U pthread_cond_signal@@GLIBC_2.3.2
 U pthread_cond_timedwait@@GLIBC_2.3.2
 U pthread_cond_wait@@GLIBC_2.3.2
 U pthread_create@@GLIBC_2.1
+U pthread_exit@@GLIBC_2.0
 U pthread_getspecific@@GLIBC_2.0
 U pthread_join@@GLIBC_2.0
 U pthread_key_create@@GLIBC_2.0
 U pthread_key_delete@@GLIBC_2.0
+U pthread_kill@@GLIBC_2.0
 U pthread_mutexattr_destroy@@GLIBC_2.0
 U pthread_mutexattr_init@@GLIBC_2.0
-U pthread_mutexattr_setpshared@@GLIBC_2.2
 U pthread_mutexattr_settype@@GLIBC_2.1
 U pthread_mutex_destroy@@GLIBC_2.0
 U pthread_mutex_init@@GLIBC_2.0
 U pthread_mutex_lock@@GLIBC_2.0
-U pthread_mutex_timedlock@@GLIBC_2.2
 U pthread_mutex_trylock@@GLIBC_2.0
 U pthread_mutex_unlock@@GLIBC_2.0
-U pthread_once@@GLIBC_2.0
+w pthread_once@@GLIBC_2.0
 U pthread_self@@GLIBC_2.0
 U pthread_setspecific@@GLIBC_2.0
-U Q_AggressiveStripPrecedingAndTrailingWhitespace
-U Q_AppendSlash
-U Q_atof
-U Q_atoi
-U Q_binarytohex
-U Q_ComposeFileName
-U Q_CopyAndFixSlashes
-U Q_ExtractFileExtension
-U Q_ExtractFilePath
-U Q_FixSlashes
-U Q_GetFileExtension
-U Q_hextobinary
-U Q_IsAbsolutePath
-U Q_isnumeric
-U Q_JoinNumbers
-U Q_MakeAbsolutePath
-U Q_MatchWildcardDNSName
-U Q_pretifymem
-U Q_pretifynum
-U Q_qsort_s
-U Q_RemoveDotSlashes
-U Q_SetExtension
-U Q_snprintf
+U puts@@GLIBC_2.0
+U pwrite64@@GLIBC_2.2
 U qsort@@GLIBC_2.0
-U Q_SplitNumbers
-U Q_SplitString
-U Q_strcat
-U Q_strcmp_prefix
-U Q_StripFilename
-U Q_StripLastDir
-U Q_StripPrecedingAndTrailingWhitespace
-U Q_StripTrailingSlash
-U Q_StripUnprintable
-U Q_strnappend
-U Q_strncat
-U Q_strnchr
-U Q_strncmp
-U Q_strncpy
-U Q_strnicmp
-U Q_strnistr
-U Q_strnlen
-U Q_StrSubst
-U Q_StrSubstInPlace
-U Q_strtoi64
-U Q_strtoui64
-U Q_StrTrim
-U Q_tolower
-U Q_UnqualifiedFileName
-U Q_URLContainsDomain
-U Q_URLDecode
-U Q_URLEncode
-U Q_UTF16ToUTF32
-U Q_UTF32ToUTF16
-U Q_UTF32ToUTF8
-U Q_UTF8ToUTF32
-U Q_vsnprintf
-U Q_vsnprintfRet
-U Q_wcstoui64
 T RAND_add
 T RAND_bytes
 T RAND_cleanup
@@ -2962,16 +2858,18 @@ R RC2_version
 T RC4
 T RC4_options
 T RC4_set_key
+U readdir64@@GLIBC_2.2
 U readdir@@GLIBC_2.0
 U read@@GLIBC_2.0
 U readlink@@GLIBC_2.0
-U RealGetCallStack
 U realloc@@GLIBC_2.0
 U realpath@@GLIBC_2.3
-U RealPrintCallStack
 U recvfrom@@GLIBC_2.0
 U recv@@GLIBC_2.0
+U recvmsg@@GLIBC_2.0
+U remove@@GLIBC_2.0
 U rename@@GLIBC_2.0
+U rewind@@GLIBC_2.0
 T ripemd160_block_asm_data_order
 T RIPEMD160_Final
 T RIPEMD160_Init
@@ -2979,7 +2877,7 @@ T RIPEMD160_Transform
 T RIPEMD160_Update
 R RMD160_version
 U rmdir@@GLIBC_2.0
-R rsa_asn1_meths
+D rsa_asn1_meths
 T RSA_blinding_off
 T RSA_blinding_on
 T RSA_flags
@@ -3007,18 +2905,18 @@ T RSA_padding_check_PKCS1_type_2
 T RSA_padding_check_SSLv23
 T RSA_padding_check_X931
 T RSA_PKCS1_SSLeay
-R rsa_pkey_meth
+D rsa_pkey_meth
 T RSA_private_decrypt
 T RSA_private_encrypt
 T RSAPrivateKey_dup
-R RSAPrivateKey_it
+D RSAPrivateKey_it
 T RSA_PSS_PARAMS_free
-R RSA_PSS_PARAMS_it
+D RSA_PSS_PARAMS_it
 T RSA_PSS_PARAMS_new
 T RSA_public_decrypt
 T RSA_public_encrypt
 T RSAPublicKey_dup
-R RSAPublicKey_it
+D RSAPublicKey_it
 T RSA_set_default_method
 T RSA_set_ex_data
 T RSA_set_method
@@ -3035,6 +2933,7 @@ R RSA_version
 T RSA_X931_hash_id
 T s2i_ASN1_INTEGER
 T s2i_ASN1_OCTET_STRING
+U scandir64@@GLIBC_2.2
 U scandir@@GLIBC_2.0
 U sched_yield@@GLIBC_2.0
 T SEED_cbc_encrypt
@@ -3045,8 +2944,13 @@ T SEED_encrypt
 T SEED_ofb128_encrypt
 T SEED_set_key
 U select@@GLIBC_2.0
+U semctl@@GLIBC_2.2
+U semget@@GLIBC_2.0
+U semop@@GLIBC_2.0
+U sem_unlink@@GLIBC_2.1.1
 U sendfile64@@GLIBC_2.3
 U send@@GLIBC_2.0
+U sendmsg@@GLIBC_2.0
 U sendto@@GLIBC_2.0
 U setenv@@GLIBC_2.0
 U _setjmp@@GLIBC_2.0
@@ -3090,8 +2994,11 @@ U shm_open@@GLIBC_2.2
 U shm_unlink@@GLIBC_2.2
 U shutdown@@GLIBC_2.0
 U sigaction@@GLIBC_2.0
+U sigaddset@@GLIBC_2.0
 B sig_app
+U sigemptyset@@GLIBC_2.0
 U signal@@GLIBC_2.0
+U sigprocmask@@GLIBC_2.0
 B sigx_app
 U sincosf@@GLIBC_2.1
 T sk_delete
@@ -3124,34 +3031,10 @@ T SMIME_write_ASN1
 T SMIME_write_CMS
 U snprintf@@GLIBC_2.0
 U socket@@GLIBC_2.0
-U socketpair@@GLIBC_2.0
-U SpewAndLogActivate
-U SpewAndLogChangeIfStillDefault
-U _SpewMessageType
-U SpewOutputFunc
 U sprintf@@GLIBC_2.0
 U sqrtf@@GLIBC_2.0
 U sqrt@@GLIBC_2.0
 U srand@@GLIBC_2.0
-T SRP_Calc_A
-T SRP_Calc_A_param
-T SRP_Calc_B
-T SRP_Calc_client_key
-T SRP_Calc_server_key
-T SRP_Calc_u
-T SRP_Calc_x
-T SRP_check_known_gN_param
-T SRP_create_verifier
-T SRP_create_verifier_BN
-T SRP_generate_client_master_secret
-T SRP_generate_server_master_secret
-T SRP_get_default_gN
-T SRP_VBASE_free
-T SRP_VBASE_get_by_user
-T SRP_VBASE_init
-T SRP_VBASE_new
-T SRP_Verify_A_mod_N
-T SRP_Verify_B_mod_N
 U sscanf@@GLIBC_2.0
 T ssl23_accept
 T ssl23_connect
@@ -3166,44 +3049,17 @@ T ssl23_read
 T ssl23_read_bytes
 T ssl23_write
 T ssl23_write_bytes
-T ssl2_accept
-T ssl2_callback_ctrl
-R ssl2_ciphers
-T ssl2_clear
-T ssl2_connect
-T ssl2_ctrl
-T ssl2_ctx_callback_ctrl
-T ssl2_ctx_ctrl
-T ssl2_default_timeout
-T ssl2_do_write
-T ssl2_enc
-T ssl2_enc_init
-T ssl2_free
-T ssl2_generate_key_material
-T ssl2_get_cipher
-T ssl2_get_cipher_by_char
-T ssl2_mac
-T ssl2_new
-T ssl2_num_ciphers
-T ssl2_part_read
-T ssl2_peek
-T ssl2_pending
-T ssl2_put_cipher_by_char
-T ssl2_read
-T ssl2_return_error
-T ssl2_set_certificate
-T ssl2_shutdown
-R ssl2_version_str
-T ssl2_write
-T ssl2_write_error
 T ssl3_accept
 T ssl3_alert_code
 T ssl3_callback_ctrl
+T ssl3_cbc_copy_mac
+T ssl3_cbc_digest_record
+T ssl3_cbc_record_digest_supported
+T ssl3_cbc_remove_padding
 T ssl3_cert_verify_mac
 T ssl3_change_cipher_state
 T ssl3_check_cert_and_algorithm
 T ssl3_check_client_hello
-T ssl3_check_finished
 T ssl3_choose_cipher
 D ssl3_ciphers
 T ssl3_cleanup_key_block
@@ -3307,7 +3163,8 @@ T ssl_cert_free
 T ssl_cert_inst
 T ssl_cert_new
 T ssl_cert_type
-T ssl_check_clienthello_tlsext
+T ssl_check_clienthello_tlsext_early
+T ssl_check_clienthello_tlsext_late
 T SSL_check_private_key
 T ssl_check_serverhello_tlsext
 T ssl_check_srvr_ecc_cert_and_alg
@@ -3382,13 +3239,6 @@ T SSL_CTX_set_psk_server_callback
 T SSL_CTX_set_purpose
 T SSL_CTX_set_quiet_shutdown
 T SSL_CTX_set_session_id_context
-T SSL_CTX_set_srp_cb_arg
-T SSL_CTX_set_srp_client_pwd_callback
-T SSL_CTX_set_srp_password
-T SSL_CTX_set_srp_strength
-T SSL_CTX_set_srp_username
-T SSL_CTX_set_srp_username_callback
-T SSL_CTX_set_srp_verify_param_callback
 T SSL_CTX_set_ssl_version
 T SSL_CTX_set_timeout
 T SSL_CTX_set_tlsext_use_srtp
@@ -3398,8 +3248,6 @@ T SSL_CTX_set_tmp_rsa_callback
 T SSL_CTX_set_trust
 T SSL_CTX_set_verify
 T SSL_CTX_set_verify_depth
-T SSL_CTX_SRP_CTX_free
-T SSL_CTX_SRP_CTX_init
 T SSL_CTX_use_certificate
 T SSL_CTX_use_certificate_ASN1
 T SSL_CTX_use_certificate_chain_file
@@ -3415,7 +3263,9 @@ T ssl_do_client_cert_cb
 T SSL_do_handshake
 T SSL_dup
 T SSL_dup_CA_list
+T ssleay_rand_bytes
 T SSL_export_keying_material
+T ssl_fill_hello_random
 T SSL_free
 T ssl_free_wbio_buffer
 T SSL_get0_next_proto_negotiated
@@ -3454,14 +3304,11 @@ T SSL_get_selected_srtp_profile
 T SSL_get_servername
 T SSL_get_servername_type
 T ssl_get_server_send_cert
+T ssl_get_server_send_pkey
 T SSL_get_session
 T SSL_get_shared_ciphers
 T SSL_get_shutdown
 T ssl_get_sign_pkey
-T SSL_get_srp_g
-T SSL_get_srp_N
-T SSL_get_srp_userinfo
-T SSL_get_srp_username
 T SSL_get_srtp_profiles
 T SSL_get_SSL_CTX
 T SSL_get_ssl_method
@@ -3500,6 +3347,7 @@ T SSL_rstate_string_long
 T SSL_select_next_proto
 T ssl_sess_cert_free
 T ssl_sess_cert_new
+T ssl_session_dup
 T SSL_SESSION_free
 T SSL_SESSION_get0_peer
 T SSL_SESSION_get_compress_id
@@ -3539,8 +3387,6 @@ T SSL_set_session_secret_cb
 T SSL_set_session_ticket_ext
 T SSL_set_session_ticket_ext_cb
 T SSL_set_shutdown
-T SSL_set_srp_server_param
-T SSL_set_srp_server_param_pw
 T SSL_set_SSL_CTX
 T SSL_set_ssl_method
 T SSL_set_state
@@ -3554,9 +3400,6 @@ T SSL_set_verify_depth
 T SSL_set_verify_result
 T SSL_set_wfd
 T SSL_shutdown
-T SSL_SRP_CTX_free
-T SSL_SRP_CTX_init
-T SSL_srp_server_param_with_username
 T SSL_state
 T SSL_state_string
 T SSL_state_string_long
@@ -3577,9 +3420,6 @@ T SSL_use_RSAPrivateKey_file
 T SSLv23_client_method
 T SSLv23_method
 T SSLv23_server_method
-T SSLv2_client_method
-T SSLv2_method
-T SSLv2_server_method
 T SSLv3_client_method
 D SSLv3_enc_data
 T SSLv3_method
@@ -3590,8 +3430,10 @@ T SSL_version
 D SSL_version_str
 T SSL_want
 T SSL_write
+U __stack_chk_fail@@GLIBC_2.4
 R STACK_version
 U statvfs64@@GLIBC_2.1
+U statvfs@@GLIBC_2.1
 U stderr@@GLIBC_2.0
 U stdin@@GLIBC_2.0
 U stdout@@GLIBC_2.0
@@ -3636,11 +3478,9 @@ U strcpy@@GLIBC_2.0
 U strdup@@GLIBC_2.0
 U strerror@@GLIBC_2.0
 U strftime@@GLIBC_2.0
-U StringAfterPrefix
 T string_to_hex
-U strlen@@GLIBC_2.0
-U _strlwr
 U strncasecmp@@GLIBC_2.0
+U strncat@@GLIBC_2.0
 U strncmp@@GLIBC_2.0
 U strncpy@@GLIBC_2.0
 U strpbrk@@GLIBC_2.0
@@ -3654,12 +3494,12 @@ U strtol@@GLIBC_2.0
 U __strtol_internal@@GLIBC_2.0
 U strtoll@@GLIBC_2.0
 U __strtoll_internal@@GLIBC_2.0
-U strtoq@@GLIBC_2.0
 U strtoul@@GLIBC_2.0
 U __strtoul_internal@@GLIBC_2.0
 U strtoull@@GLIBC_2.0
-U strtouq@@GLIBC_2.0
+U __strtoull_internal@@GLIBC_2.0
 U swprintf@@GLIBC_2.2
+U swscanf@@GLIBC_2.2
 T SXNET_add_id_asc
 T SXNET_add_id_INTEGER
 T SXNET_add_id_ulong
@@ -3668,36 +3508,18 @@ T SXNET_get_id_asc
 T SXNET_get_id_INTEGER
 T SXNET_get_id_ulong
 T SXNETID_free
-R SXNETID_it
+D SXNETID_it
 T SXNETID_new
-R SXNET_it
+D SXNET_it
 T SXNET_new
 U symlink@@GLIBC_2.0
+U syscall@@GLIBC_2.0
 U sysconf@@GLIBC_2.0
 U system@@GLIBC_2.0
-U Test_IsActive
-U Test_SetFailed
-U ThreadGetCurrentId
-U ThreadGetCurrentProcessId
-U ThreadInMainThread
-U ThreadInterlockedAssignIf64
-U ThreadInterlockedCompareExchange64
-U ThreadInterlockedCompareExchangePointer
-U ThreadInterlockedDecrement
-U ThreadInterlockedDecrement64
-U ThreadInterlockedExchange
-U ThreadInterlockedExchange64
-U ThreadInterlockedExchangeAdd
-U ThreadInterlockedExchangeAdd64
-U ThreadInterlockedIncrement
-U ThreadInterlockedIncrement64
-U ThreadIsProcessActive
-U ThreadIsThreadIdRunning
-U ThreadSetDebugName
-U ThreadShellExecute
-U ThreadSleep
-U ThreadTerminateProcess
+U tcgetattr@@GLIBC_2.0
+U tcsetattr@@GLIBC_2.0
 U time@@GLIBC_2.0
+U timegm@@GLIBC_2.0
 U times@@GLIBC_2.0
 U __timezone@@GLIBC_2.0
 U timezone@@GLIBC_2.0
@@ -3706,6 +3528,7 @@ T tls12_get_req_sig_algs
 T tls12_get_sigandhash
 T tls12_get_sigid
 T tls1_alert_code
+T tls1_cbc_remove_padding
 T tls1_cert_verify_mac
 T tls1_change_cipher_state
 T tls1_clear
@@ -3737,16 +3560,11 @@ T TLSv1_method
 T TLSv1_server_method
 U tolower@@GLIBC_2.0
 U toupper@@GLIBC_2.0
+U towlower@@GLIBC_2.0
+U towupper@@GLIBC_2.0
 T tree_find_sk
+U truncf@@GLIBC_2.1
 U trunc@@GLIBC_2.1
-T TXT_DB_create_index
-T TXT_DB_free
-T TXT_DB_get_by_index
-T TXT_DB_insert
-T TXT_DB_read
-R TXT_DB_version
-T TXT_DB_write
-U tzset@@GLIBC_2.0
 T UI_add_error_string
 T UI_add_info_string
 T UI_add_input_boolean
@@ -3798,10 +3616,10 @@ T UI_set_ex_data
 T UI_set_method
 T UI_set_result
 U uname@@GLIBC_2.0
-U ungetc@@GLIBC_2.0
 U unlink@@GLIBC_2.0
+U unsetenv@@GLIBC_2.0
 T USERNOTICE_free
-R USERNOTICE_it
+D USERNOTICE_it
 T USERNOTICE_new
 U usleep@@GLIBC_2.0
 T UTF8_getc
@@ -3812,56 +3630,64 @@ T v2i_ASN1_BIT_STRING
 T v2i_GENERAL_NAME
 T v2i_GENERAL_NAME_ex
 T v2i_GENERAL_NAMES
-R v3_akey_id
-R v3_alt
-R v3_bcons
-R v3_cpols
-R v3_crld
-R v3_crl_hold
-R v3_crl_invdate
-R v3_crl_num
-R v3_crl_reason
-R v3_delta_crl
-R v3_ext_ku
-R v3_freshest_crl
-R v3_idp
-R v3_info
-R v3_inhibit_anyp
-R v3_key_usage
-R v3_name_constraints
-R v3_nscert
-R v3_ns_ia5_list
-R v3_ocsp_accresp
-R v3_ocsp_acutoff
-R v3_ocsp_crlid
-R v3_ocsp_nocheck
-R v3_ocsp_nonce
-R v3_ocsp_serviceloc
-R v3_pci
-R v3_pkey_usage_period
-R v3_policy_constraints
-R v3_policy_mappings
-R v3_sinfo
-R v3_skey_id
-R v3_sxnet
+D v3_akey_id
+D v3_alt
+D v3_bcons
+D v3_cpols
+D v3_crld
+D v3_crl_hold
+D v3_crl_invdate
+D v3_crl_num
+D v3_crl_reason
+D v3_delta_crl
+D v3_ext_ku
+D v3_freshest_crl
+D v3_idp
+D v3_info
+D v3_inhibit_anyp
+D v3_key_usage
+D v3_name_constraints
+D v3_nscert
+D v3_ns_ia5_list
+D v3_ocsp_accresp
+D v3_ocsp_acutoff
+D v3_ocsp_crlid
+D v3_ocsp_nocheck
+D v3_ocsp_nonce
+D v3_ocsp_serviceloc
+D v3_pci
+D v3_pkey_usage_period
+D v3_policy_constraints
+D v3_policy_mappings
+D v3_sinfo
+D v3_skey_id
+D v3_sxnet
 U vasprintf@@GLIBC_2.0
-U V_FixDoubleSlashes
-U V_FixupPathName
 U vfprintf@@GLIBC_2.0
 T vpaes_cbc_encrypt
 T vpaes_decrypt
 T vpaes_encrypt
 T vpaes_set_decrypt_key
 T vpaes_set_encrypt_key
+T VR_GetGenericInterfaceInternal
+T VR_GetStringForHmdErrorInternal
+T VR_InitInternal
+T VR_IsHmdPresentInternal
+T VR_ShutdownInternal
 U vsnprintf@@GLIBC_2.0
+U vswprintf@@GLIBC_2.2
+U wait@@GLIBC_2.0
 U waitpid@@GLIBC_2.0
-U Warning
+U wcscasecmp@@GLIBC_2.1
 U wcscmp@@GLIBC_2.0
 U wcslen@@GLIBC_2.0
-U __wcstol_internal@@GLIBC_2.0
+U wcsncasecmp@@GLIBC_2.1
+U wcsncat@@GLIBC_2.0
+U wcsncpy@@GLIBC_2.0
+U wcstol@@GLIBC_2.0
+U wcstoll@@GLIBC_2.1
 U wcstombs@@GLIBC_2.0
-U WeakRandomFloat
-U WeakRandomInt
+U wcstoull@@GLIBC_2.1
 T WHIRLPOOL
 T WHIRLPOOL_BitUpdate
 T whirlpool_block
@@ -3876,14 +3702,15 @@ T X509_add1_ext_i2d
 T X509_add1_reject_object
 T X509_add1_trust_object
 T X509_add_ext
+T X509_ALGOR_cmp
 T X509_ALGOR_dup
 T X509_ALGOR_free
 T X509_ALGOR_get0
-R X509_ALGOR_it
+D X509_ALGOR_it
 T X509_ALGOR_new
 T X509_ALGOR_set0
 T X509_ALGOR_set_md
-R X509_ALGORS_it
+D X509_ALGORS_it
 T X509_alias_get0
 T X509_alias_set1
 T X509at_add1_attr
@@ -3906,18 +3733,18 @@ T X509_ATTRIBUTE_free
 T X509_ATTRIBUTE_get0_data
 T X509_ATTRIBUTE_get0_object
 T X509_ATTRIBUTE_get0_type
-R X509_ATTRIBUTE_it
+D X509_ATTRIBUTE_it
 T X509_ATTRIBUTE_new
 T X509_ATTRIBUTE_set1_data
 T X509_ATTRIBUTE_set1_object
-R X509_ATTRIBUTE_SET_it
+D X509_ATTRIBUTE_SET_it
 T X509_CERT_AUX_free
-R X509_CERT_AUX_it
+D X509_CERT_AUX_it
 T X509_CERT_AUX_new
 T X509_CERT_AUX_print
 T X509_certificate_type
 T X509_CERT_PAIR_free
-R X509_CERT_PAIR_it
+D X509_CERT_PAIR_it
 T X509_CERT_PAIR_new
 T X509_check_akid
 T X509_check_ca
@@ -3926,7 +3753,7 @@ T X509_check_private_key
 T X509_check_purpose
 T X509_check_trust
 T X509_CINF_free
-R X509_CINF_it
+D X509_CINF_it
 T X509_CINF_new
 T X509_cmp
 T X509_cmp_current_time
@@ -3949,9 +3776,9 @@ T X509_CRL_get_ext_count
 T X509_CRL_get_ext_d2i
 T X509_CRL_get_meth_data
 T X509_CRL_INFO_free
-R X509_CRL_INFO_it
+D X509_CRL_INFO_it
 T X509_CRL_INFO_new
-R X509_CRL_it
+D X509_CRL_it
 T X509_CRL_match
 T X509_CRL_METHOD_free
 T X509_CRL_METHOD_new
@@ -3973,12 +3800,12 @@ T X509_EXTENSION_free
 T X509_EXTENSION_get_critical
 T X509_EXTENSION_get_data
 T X509_EXTENSION_get_object
-R X509_EXTENSION_it
+D X509_EXTENSION_it
 T X509_EXTENSION_new
 T X509_EXTENSION_set_critical
 T X509_EXTENSION_set_data
 T X509_EXTENSION_set_object
-R X509_EXTENSIONS_it
+D X509_EXTENSIONS_it
 D x509_file_lookup
 T X509_find_by_issuer_and_serial
 T X509_find_by_subject
@@ -4013,7 +3840,7 @@ T X509_issuer_and_serial_hash
 T X509_issuer_name_cmp
 T X509_issuer_name_hash
 T X509_issuer_name_hash_old
-R X509_it
+D X509_it
 T X509_keyid_get0
 T X509_keyid_set1
 T X509_load_cert_crl_file
@@ -4038,7 +3865,7 @@ T X509_NAME_cmp
 T X509_NAME_delete_entry
 T X509_NAME_digest
 T X509_NAME_dup
-R X509_NAME_ENTRIES_it
+D X509_NAME_ENTRIES_it
 T X509_NAME_entry_count
 T X509_NAME_ENTRY_create_by_NID
 T X509_NAME_ENTRY_create_by_OBJ
@@ -4047,11 +3874,11 @@ T X509_NAME_ENTRY_dup
 T X509_NAME_ENTRY_free
 T X509_NAME_ENTRY_get_data
 T X509_NAME_ENTRY_get_object
-R X509_NAME_ENTRY_it
+D X509_NAME_ENTRY_it
 T X509_NAME_ENTRY_new
 T X509_NAME_ENTRY_set_data
 T X509_NAME_ENTRY_set_object
-R x509_name_ff
+D x509_name_ff
 T X509_NAME_free
 T X509_NAME_get_entry
 T X509_NAME_get_index_by_NID
@@ -4060,8 +3887,8 @@ T X509_NAME_get_text_by_NID
 T X509_NAME_get_text_by_OBJ
 T X509_NAME_hash
 T X509_NAME_hash_old
-R X509_NAME_INTERNAL_it
-R X509_NAME_it
+D X509_NAME_INTERNAL_it
+D X509_NAME_it
 T X509_NAME_new
 T X509_NAME_oneline
 T X509_NAME_print
@@ -4097,7 +3924,7 @@ T X509_pubkey_digest
 T X509_PUBKEY_free
 T X509_PUBKEY_get
 T X509_PUBKEY_get0_param
-R X509_PUBKEY_it
+D X509_PUBKEY_it
 T X509_PUBKEY_new
 T X509_PUBKEY_set
 T X509_PUBKEY_set0_param
@@ -4134,9 +3961,9 @@ T X509_REQ_get_extension_nids
 T X509_REQ_get_extensions
 T X509_REQ_get_pubkey
 T X509_REQ_INFO_free
-R X509_REQ_INFO_it
+D X509_REQ_INFO_it
 T X509_REQ_INFO_new
-R X509_REQ_it
+D X509_REQ_it
 T X509_REQ_new
 T X509_REQ_set_extension_nids
 T X509_REQ_set_pubkey
@@ -4155,11 +3982,18 @@ T X509_REVOKED_get_ext_by_NID
 T X509_REVOKED_get_ext_by_OBJ
 T X509_REVOKED_get_ext_count
 T X509_REVOKED_get_ext_d2i
-R X509_REVOKED_it
+D X509_REVOKED_it
 T X509_REVOKED_new
 T X509_set_ex_data
+T X509_set_issuer_name
+T X509_set_notAfter
+T X509_set_notBefore
+T X509_set_pubkey
+T X509_set_serialNumber
+T X509_set_subject_name
+T X509_set_version
 T X509_SIG_free
-R X509_SIG_it
+D X509_SIG_it
 T X509_sign
 T X509_signature_dump
 T X509_signature_print
@@ -4283,7 +4117,7 @@ T X509V3_set_ctx
 T X509V3_set_nconf
 T X509V3_string_free
 T X509_VAL_free
-R X509_VAL_it
+D X509_VAL_it
 T X509_VAL_new
 T X509_verify
 T X509_verify_cert
@@ -4308,162 +4142,131 @@ T X509_VERIFY_PARAM_set_trust
 T X509_VERIFY_PARAM_table_cleanup
 R X509_version
 T X9_62_CHARACTERISTIC_TWO_free
-R X9_62_CHARACTERISTIC_TWO_it
+D X9_62_CHARACTERISTIC_TWO_it
 T X9_62_CHARACTERISTIC_TWO_new
-R X9_62_CURVE_it
-R X9_62_FIELDID_it
+D X9_62_CURVE_it
+D X9_62_FIELDID_it
 T X9_62_PENTANOMIAL_free
-R X9_62_PENTANOMIAL_it
+D X9_62_PENTANOMIAL_it
 T X9_62_PENTANOMIAL_new
 U __xmknod@@GLIBC_2.0
 U __xstat64@@GLIBC_2.2
 U __xstat@@GLIBC_2.0
-U Q_UnicodeLength(char const*)
-U Q_UnicodeRepair(char*, EStringConvertErrorPolicy)
-U Q_UnicodeAdvance(char*, int)
-U Q_stristr(char const*, char const*)
 U operator delete[](void*)@@GLIBCXX_3.4
 U operator delete(void*)@@GLIBCXX_3.4
 U operator delete(void*, std::nothrow_t const&)@@GLIBCXX_3.4
-D z_errmsg
-T zError
-T zlibCompileFlags
-T zlibVersion
-R ZLONG_it
-U CValidator::ClaimMemory(void*)
-U CValidator::ClaimArrayMemory(void*)
-U CValidator::Pop()
-U CValidator::Push(char const*, void*, char const*)
-U CValidator::IsClaimed(void*)
-U SteamVProf::CVProfNode::EnterScope(void*)
-U SteamVProf::CVProfNode::GetSubNode(char const*, int, char const*, int)
-U SteamVProf::CVProfNode::Reset()
-U SteamVProf::CVProfNode::ExitScope()
-U SteamVProf::CVProfNode::MarkFrame()
-U SteamVProf::CVProfile::OutputReport(int, char const*, int)
-U SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*)
-U SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
-U SteamVProf::CVProfile::~CVProfile()
-U SteamStdLib::CommandLine()
-U SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
-U SteamStdLib::CCommandLineParam::~CCommandLineParam()
-U SteamThreadTools::CThreadEvent::Set()
-U SteamThreadTools::CThreadEvent::Check()
-U SteamThreadTools::CThreadEvent::CThreadEvent(bool)
-U SteamThreadTools::CThreadMutex::CThreadMutex()
-U SteamThreadTools::CThreadMutex::~CThreadMutex()
-U SteamThreadTools::CThreadLocalBase::Set(void*)
-U SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
-U SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
-U SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
-U SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-U SteamThreadTools::CThread::GetThreadProc()
-U SteamThreadTools::CThread::IsThreadRunning()
-U SteamThreadTools::CThread::Init()
-U SteamThreadTools::CThread::Join(unsigned int)
-U SteamThreadTools::CThread::Sleep(unsigned int)
-U SteamThreadTools::CThread::Start(unsigned int)
-U SteamThreadTools::CThread::OnExit()
-U SteamThreadTools::CThread::Resume()
-U SteamThreadTools::CThread::GetName()
-U SteamThreadTools::CThread::IsAlive()
-U SteamThreadTools::CThread::SetName(char const*)
-U SteamThreadTools::CThread::Suspend()
-U SteamThreadTools::CThread::Terminate(int)
-U SteamThreadTools::CThread::CThread()
-U SteamThreadTools::CThread::~CThread()
-U CStringNormalization::Normalize(bool, char const*, char*, int)
-U CUniformRandomStream::CUniformRandomStream()
-W bool __gnu_cxx::__is_null_pointer<char>(char*)
+D ZLONG_it
+B pcrecpp::RE::no_arg
+T pcrecpp::RE::Cleanup()
+T pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
+T pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
+T pcrecpp::RE::~RE()
+T pcrecpp::RE::~RE()
+T pcrecpp::Arg::parse_char(char const*, int, void*)
+T pcrecpp::Arg::parse_long(char const*, int, void*)
+T pcrecpp::Arg::parse_null(char const*, int, void*)
+T pcrecpp::Arg::parse_uint(char const*, int, void*)
+T pcrecpp::Arg::parse_float(char const*, int, void*)
+T pcrecpp::Arg::parse_short(char const*, int, void*)
+T pcrecpp::Arg::parse_uchar(char const*, int, void*)
+T pcrecpp::Arg::parse_ulong(char const*, int, void*)
+T pcrecpp::Arg::parse_double(char const*, int, void*)
+T pcrecpp::Arg::parse_string(char const*, int, void*)
+T pcrecpp::Arg::parse_ushort(char const*, int, void*)
+T pcrecpp::Arg::parse_int_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_long_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_longlong(char const*, int, void*)
+T pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_int_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_short_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
+T pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_long_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_short_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
+T pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
+T pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
+T pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
+T pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
+T pcrecpp::Arg::parse_int(char const*, int, void*)
 U operator new[](unsigned int)@@GLIBCXX_3.4
-U SteamThreadTools::CThreadLocalBase::Get() const
+T pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
+T pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+T pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+T pcrecpp::RE::NumberOfCapturingGroups() const
+T pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+T pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
+T pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
+T pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::find(wchar_t const*, unsigned int, unsigned int) const@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::rfind(wchar_t const*, unsigned int, unsigned int) const@@GLIBCXX_3.4
-U std::istream::gcount() const@@GLIBCXX_3.4
-U std::string::find_last_of(char, unsigned int) const@@GLIBCXX_3.4
-U std::string::find_first_of(char, unsigned int) const@@GLIBCXX_3.4
 U std::string::find_first_of(char const*, unsigned int) const@@GLIBCXX_3.4
+U std::string::find_first_of(char const*, unsigned int, unsigned int) const@@GLIBCXX_3.4
 U std::string::find_first_not_of(char const*, unsigned int) const@@GLIBCXX_3.4
 U std::string::at(unsigned int) const@@GLIBCXX_3.4
-U std::string::end() const@@GLIBCXX_3.4
-U std::string::data() const@@GLIBCXX_3.4
 U std::string::find(char, unsigned int) const@@GLIBCXX_3.4
-U std::string::find(char const*, unsigned int) const@@GLIBCXX_3.4
+U std::string::find(char const*, unsigned int, unsigned int) const@@GLIBCXX_3.4
 U std::string::find(std::string const&, unsigned int) const@@GLIBCXX_3.4
-U std::string::size() const@@GLIBCXX_3.4
-U std::string::begin() const@@GLIBCXX_3.4
-U std::string::c_str() const@@GLIBCXX_3.4
-U std::string::empty() const@@GLIBCXX_3.4
 U std::string::rfind(char, unsigned int) const@@GLIBCXX_3.4
-U std::string::length() const@@GLIBCXX_3.4
 U std::string::substr(unsigned int, unsigned int) const@@GLIBCXX_3.4
 U std::string::compare(unsigned int, unsigned int, std::string const&) const@@GLIBCXX_3.4
 U std::string::compare(char const*) const@@GLIBCXX_3.4
 U std::string::compare(std::string const&) const@@GLIBCXX_3.4
-U std::string::_M_iend() const@@GLIBCXX_3.4
-U std::string::capacity() const@@GLIBCXX_3.4
-U std::string::_M_ibegin() const@@GLIBCXX_3.4
-U std::string::operator[](unsigned int) const@@GLIBCXX_3.4
-U std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::str() const@@GLIBCXX_3.4
-U std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::str() const@@GLIBCXX_3.4
-U std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >::rdbuf() const@@GLIBCXX_3.4
-U std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::str() const@@GLIBCXX_3.4
 U std::ctype<char>::_M_widen_init() const@@GLIBCXX_3.4.11
-U std::basic_ios<char, std::char_traits<char> >::eof() const@@GLIBCXX_3.4
-U std::basic_ios<char, std::char_traits<char> >::fail() const@@GLIBCXX_3.4
-U std::basic_ios<char, std::char_traits<char> >::good() const@@GLIBCXX_3.4
-U std::basic_ios<char, std::char_traits<char> >::operator void*() const@@GLIBCXX_3.4
-U std::allocator<char>::allocator()@@GLIBCXX_3.4
-U std::allocator<char>::~allocator()@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::_M_leak_hard()@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::_Rep::_M_destroy(std::allocator<wchar_t> const&)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::_Rep::_S_empty_rep_storage@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::_Rep::_S_create(unsigned int, unsigned int, std::allocator<wchar_t> const&)@@GLIBCXX_3.4
-U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::erase(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::append(wchar_t const*, unsigned int)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::append(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&)@@GLIBCXX_3.4
-U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::assign(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::resize(unsigned int, wchar_t)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::reserve(unsigned int)@@GLIBCXX_3.4
+U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_string(unsigned int, wchar_t, std::allocator<wchar_t> const&)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_string(wchar_t const*, std::allocator<wchar_t> const&)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_string(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_string(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&, unsigned int, unsigned int)@@GLIBCXX_3.4
 U std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_string()@@GLIBCXX_3.4
-U std::istream& std::istream::_M_extract<float>(float&)@@GLIBCXX_3.4.9
-U std::istream& std::istream::_M_extract<unsigned int>(unsigned int&)@@GLIBCXX_3.4.9
+U std::basic_iostream<char, std::char_traits<char> >::~basic_iostream()@@GLIBCXX_3.4
 U std::istream::get()@@GLIBCXX_3.4
 U std::istream::peek()@@GLIBCXX_3.4
 U std::istream::read(char*, int)@@GLIBCXX_3.4
 U std::istream::putback(char)@@GLIBCXX_3.4
-U std::istream::operator>>(double&)@@GLIBCXX_3.4
 U std::istream::operator>>(int&)@@GLIBCXX_3.4
-U std::istream::operator>>(unsigned int&)@@GLIBCXX_3.4
 U std::ostream::put(char)@@GLIBCXX_3.4
 U std::ostream::flush()@@GLIBCXX_3.4
 U std::ostream::write(char const*, int)@@GLIBCXX_3.4
-U std::ostream& std::ostream::_M_insert<bool>(bool)@@GLIBCXX_3.4.9
-U std::ostream& std::ostream::_M_insert<double>(double)@@GLIBCXX_3.4.9
 U std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)@@GLIBCXX_3.4.9
-U std::ostream::operator<<(double)@@GLIBCXX_3.4
+U std::ostream& std::ostream::_M_insert<void const*>(void const*)@@GLIBCXX_3.4.9
 U std::ostream::operator<<(int)@@GLIBCXX_3.4
-U std::ostream::operator<<(unsigned int)@@GLIBCXX_3.4
-U std::ostream::operator<<(unsigned long)@@GLIBCXX_3.4
-U std::ostream::operator<<(std::ostream& (*)(std::ostream&))@@GLIBCXX_3.4
-U std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))@@GLIBCXX_3.4
-U std::ostream::operator<<(void const*)@@GLIBCXX_3.4
-U std::ostream::operator<<(unsigned short)@@GLIBCXX_3.4
-U std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::string::_M_leak_hard()@@GLIBCXX_3.4
-U std::string::_S_empty_rep()@@GLIBCXX_3.4
 U std::string::_S_copy_chars(char*, char*, char*)@@GLIBCXX_3.4
+U std::string::_M_replace_aux(unsigned int, unsigned int, unsigned int, char)@@GLIBCXX_3.4
 U std::string::end()@@GLIBCXX_3.4
 U std::string::_Rep::_M_destroy(std::allocator<char> const&)@@GLIBCXX_3.4
-U std::string::_Rep::_M_refdata()@@GLIBCXX_3.4
 U std::string::_Rep::_S_empty_rep_storage@@GLIBCXX_3.4
 U std::string::_Rep::_M_set_length_and_sharable(unsigned int)@@GLIBCXX_3.4.5
 U std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::string::swap(std::string&)@@GLIBCXX_3.4
-U std::string::begin()@@GLIBCXX_3.4
 U std::string::clear()@@GLIBCXX_3.4
 U std::string::erase(unsigned int, unsigned int)@@GLIBCXX_3.4
 U std::string::erase(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>)@@GLIBCXX_3.4
@@ -4475,52 +4278,42 @@ U std::string::append(std::string const&, unsigned int, unsigned int)@@GLIBCXX_3
 U std::string::assign(char const*)@@GLIBCXX_3.4
 U std::string::assign(char const*, unsigned int)@@GLIBCXX_3.4
 U std::string::assign(std::string const&)@@GLIBCXX_3.4
+U std::string::insert(unsigned int, char const*, unsigned int)@@GLIBCXX_3.4
 U std::string::resize(unsigned int, char)@@GLIBCXX_3.4
 U std::string::resize(unsigned int)@@GLIBCXX_3.4
+U std::string::_M_leak()@@GLIBCXX_3.4
 U std::string::replace(unsigned int, unsigned int, char const*, unsigned int)@@GLIBCXX_3.4
-U std::string::replace(unsigned int, unsigned int, std::string const&)@@GLIBCXX_3.4
 U std::string::replace(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, char const*, char const*)@@GLIBCXX_3.4
 U std::string::reserve(unsigned int)@@GLIBCXX_3.4
 U std::string::_M_mutate(unsigned int, unsigned int, unsigned int)@@GLIBCXX_3.4
 U std::string::push_back(char)@@GLIBCXX_3.4
-U std::string::operator=(char const*)@@GLIBCXX_3.4
-U std::string::operator=(std::string const&)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(unsigned int, char, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned int, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)@@GLIBCXX_3.4
-U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()@@GLIBCXX_3.4
+U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&, unsigned int, unsigned int)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@@GLIBCXX_3.4
 U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@@GLIBCXX_3.4
-U std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()@@GLIBCXX_3.4
-U std::string::operator[](unsigned int)@@GLIBCXX_3.4
-U std::string::operator+=(char)@@GLIBCXX_3.4
-U std::string::operator+=(char const*)@@GLIBCXX_3.4
-U std::string::operator+=(std::string const&)@@GLIBCXX_3.4
-U std::basic_streambuf<char, std::char_traits<char> >::in_avail()@@GLIBCXX_3.4
 U std::basic_streambuf<char, std::char_traits<char> >::~basic_streambuf()@@GLIBCXX_3.4
 U std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::_M_sync(char*, unsigned int, unsigned int)@@GLIBCXX_3.4
 U std::_List_node_base::_M_transfer(std::_List_node_base*, std::_List_node_base*)@@GLIBCXX_3.4.14
-U std::_List_node_base::hook(std::_List_node_base*)@@GLIBCXX_3.4
-U std::_List_node_base::unhook()@@GLIBCXX_3.4
 U std::_List_node_base::_M_hook(std::_List_node_base*)@@GLIBCXX_3.4.14
 U std::_List_node_base::_M_unhook()@@GLIBCXX_3.4.14
-U std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::_Ios_Openmode)@@GLIBCXX_3.4
 U std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_stringstream()@@GLIBCXX_3.4
-U std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >::basic_istringstream(std::string const&, std::_Ios_Openmode)@@GLIBCXX_3.4
 U std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_istringstream()@@GLIBCXX_3.4
-U std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode)@@GLIBCXX_3.4
 U std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()@@GLIBCXX_3.4
 U std::tr1::__detail::__prime_list@@GLIBCXX_3.4.10
 U std::locale::locale()@@GLIBCXX_3.4
 U std::locale::~locale()@@GLIBCXX_3.4
+U std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)@@GLIBCXX_3.4.15
+U std::__detail::_List_node_base::_M_unhook()@@GLIBCXX_3.4.15
 U std::ios_base::Init::Init()@@GLIBCXX_3.4
 U std::ios_base::Init::~Init()@@GLIBCXX_3.4
 U std::ios_base::ios_base()@@GLIBCXX_3.4
 U std::ios_base::~ios_base()@@GLIBCXX_3.4
 U std::bad_alloc::~bad_alloc()@@GLIBCXX_3.4
 U std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)@@GLIBCXX_3.4
-U std::basic_ios<char, std::char_traits<char> >::~basic_ios()@@GLIBCXX_3.4
+U std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)@@GLIBCXX_3.4
 U std::exception::~exception()@@GLIBCXX_3.4
 U operator new(unsigned int)@@GLIBCXX_3.4
 U operator new(unsigned int, std::nothrow_t const&)@@GLIBCXX_3.4
@@ -4540,12 +4333,8 @@ U std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node
 U std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
 U std::basic_istream<char, std::char_traits<char> >& std::ws<char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&)@@GLIBCXX_3.4
 U std::cerr@@GLIBCXX_3.4
-U std::cout@@GLIBCXX_3.4
-U std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@@GLIBCXX_3.4
 U std::nothrow@@GLIBCXX_3.4
 U std::terminate()@@GLIBCXX_3.4
-U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)@@GLIBCXX_3.4
-U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setfill<char>)@@GLIBCXX_3.4
 U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)@@GLIBCXX_3.4
 U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)@@GLIBCXX_3.4
 U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@@GLIBCXX_3.4
@@ -4554,7 +4343,6 @@ U typeinfo for bool@@CXXABI_1.3
 U typeinfo for unsigned char@@CXXABI_1.3
 U typeinfo for int@@CXXABI_1.3
 U typeinfo for unsigned int@@CXXABI_1.3
-U typeinfo for SteamThreadTools::CThread
 V typeinfo for CryptoPP::BlockPaddingSchemeDef::BlockPaddingScheme
 V typeinfo for CryptoPP::Integer::RandomNumberType
 U typeinfo for unsigned char*@@CXXABI_1.3

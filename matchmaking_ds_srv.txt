@@ -1677,6 +1677,8 @@ t fourplanes_t::SetPlane(int, Vector const&, float)
 d (anonymous namespace)::s_table
 t InterfaceReg::InterfaceReg(void* (*)(), char const*)
 t InterfaceReg::InterfaceReg(void* (*)(), char const*)
+t CCallbackImpl<4>::GetCallbackSizeBytes()
+t CCallbackImpl<4>::Run(void*, bool, unsigned long long)
 U CThreadRWLock::UnlockWrite()
 U CThreadRWLock::WaitForRead()
 U CThreadRWLock::LockForWrite()
@@ -2544,9 +2546,7 @@ t CBitWrite::WriteBitVec3Normal(Vector const&)
 t CBitWrite::WriteBitsFromBuffer(bf_read*, int)
 t CBitWrite::SeekToBit(int)
 t CBitWrite::WriteBits(void const*, int)
-t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::GetCallbackSizeBytes()
 t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::Run(void*)
-t CCallback<GCSDK::CGCClient, GCMessageAvailable_t, false>::Run(void*, bool, unsigned long long)
 t ConVarRef::Init(char const*, bool)
 t ConVarRef::ConVarRef(IConVar*)
 t ConVarRef::ConVarRef(char const*)
@@ -2814,6 +2814,7 @@ r typeinfo for IMatchExtL4D
 r typeinfo for IMatchServer
 r typeinfo for IMatchSystem
 r typeinfo for CCallbackBase
+r typeinfo for CCallbackImpl<4>
 r typeinfo for ConCommandBase
 r typeinfo for CServerManager
 r typeinfo for IServerManager
@@ -2889,6 +2890,7 @@ r typeinfo name for IMatchExtL4D
 r typeinfo name for IMatchServer
 r typeinfo name for IMatchSystem
 r typeinfo name for CCallbackBase
+r typeinfo name for CCallbackImpl<4>
 r typeinfo name for ConCommandBase
 r typeinfo name for CServerManager
 r typeinfo name for IServerManager
@@ -2963,6 +2965,7 @@ r vtable for IMatchExtL4D
 r vtable for IMatchServer
 r vtable for IMatchSystem
 r vtable for CCallbackBase
+r vtable for CCallbackImpl<4>
 r vtable for ConCommandBase
 r vtable for CServerManager
 r vtable for IServerManager

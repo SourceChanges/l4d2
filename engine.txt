@@ -4059,6 +4059,7 @@ U SteamAPI_InitSafe
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
 U SteamAPI_RunCallbacks
+U SteamAPI_SetBreakpadAppID
 U SteamAPI_SetMiniDumpComment
 U SteamAPI_Shutdown
 U SteamAPI_UnregisterCallback

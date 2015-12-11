@@ -552,6 +552,7 @@ b gmodinfo
 w __gmon_start__
 d g_MostCommonPathIDs
 d g_MostCommonPrefixes
+d g_nDedicatedServerAppIdBreakpad
 b g_NetScratchBuffers
 d gNetworkMessageNames
 d gNetworkTextMessage
@@ -1079,6 +1080,7 @@ U stdin@@GLIBC_2.0
 U stdout@@GLIBC_2.0
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
+U SteamAPI_SetBreakpadAppID
 U SteamAPI_SetMiniDumpComment
 U SteamAPI_UnregisterCallback
 U SteamAPI_UnregisterCallResult
@@ -2120,7 +2122,7 @@ t inflate_codes_free(inflate_codes_state*, z_stream_s*)
 t inflate_trees_bits(unsigned int*, unsigned int*, inflate_huft_s**, inflate_huft_s*, z_stream_s*)
 t InitMaterialSystem()
 t IsLowViolenceBuild()
-t Key_NameForBinding(char const*, int, int, int)
+t Key_NameForBinding(char const*, int, int, BindingLookupOption_t)
 t LocateGameInfoFile(CFSSteamSetupInfo const&, char*, int)
 t MathLib_MMXEnabled()
 t MathLib_SSEEnabled()
@@ -7328,6 +7330,20 @@ t SVC_SetPause::Process()
 t SVC_SetPause::~SVC_SetPause()
 t SVC_SetPause::~SVC_SetPause()
 t SVC_SetPause::~SVC_SetPause()
+t CCallbackImpl<12>::GetCallbackSizeBytes()
+t CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<12>::~CCallbackImpl()
+t CCallbackImpl<12>::~CCallbackImpl()
+t CCallbackImpl<1>::GetCallbackSizeBytes()
+t CCallbackImpl<1>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<1>::~CCallbackImpl()
+t CCallbackImpl<1>::~CCallbackImpl()
+t CCallbackImpl<20>::GetCallbackSizeBytes()
+t CCallbackImpl<20>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<4>::GetCallbackSizeBytes()
+t CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+t CCallbackImpl<8>::GetCallbackSizeBytes()
+t CCallbackImpl<8>::Run(void*, bool, unsigned long long)
 t CCoreDispInfo::CreateTris()
 t CCoreDispInfo::GetTriCount()
 t CCoreDispInfo::IsTriRemove(int)
@@ -10179,27 +10195,13 @@ t void CByteswap::SwapBuffer<unsigned long>(unsigned long*, unsigned long*, int)
 t void CByteswap::SwapBuffer<unsigned short>(unsigned short*, unsigned short*, int) [clone .isra.48] [clone .part.49] [clone .constprop.126]
 t CByteswap::SwapFieldToTargetEndian(void*, void*, typedescription_t*)
 t CByteswap::SwapFieldsToTargetEndian(void*, void*, datamap_t*)
-t CCallback<CSteam3Server, GSPolicyResponse_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteam3Server, GSPolicyResponse_t, true>::Run(void*)
-t CCallback<CSteam3Server, GSPolicyResponse_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteam3Server, SteamServersConnected_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteam3Server, SteamServersConnected_t, true>::Run(void*)
-t CCallback<CSteam3Server, SteamServersConnected_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteam3Server, SteamServersDisconnected_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteam3Server, SteamServersDisconnected_t, true>::Run(void*)
-t CCallback<CSteam3Server, SteamServersDisconnected_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteam3Server, SteamServerConnectFailure_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteam3Server, SteamServerConnectFailure_t, true>::Run(void*)
-t CCallback<CSteam3Server, SteamServerConnectFailure_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CSteam3Server, ValidateAuthTicketResponse_t, true>::GetCallbackSizeBytes()
 t CCallback<CSteam3Server, ValidateAuthTicketResponse_t, true>::Run(void*)
-t CCallback<CSteam3Server, ValidateAuthTicketResponse_t, true>::Run(void*, bool, unsigned long long)
-t CCallback<CWorkshopManager, RemoteStoragePublishedFileSubscribed_t, false>::GetCallbackSizeBytes()
 t CCallback<CWorkshopManager, RemoteStoragePublishedFileSubscribed_t, false>::Run(void*)
-t CCallback<CWorkshopManager, RemoteStoragePublishedFileSubscribed_t, false>::Run(void*, bool, unsigned long long)
-t CCallback<CWorkshopManager, RemoteStoragePublishedFileUnsubscribed_t, false>::GetCallbackSizeBytes()
 t CCallback<CWorkshopManager, RemoteStoragePublishedFileUnsubscribed_t, false>::Run(void*)
-t CCallback<CWorkshopManager, RemoteStoragePublishedFileUnsubscribed_t, false>::Run(void*, bool, unsigned long long)
 t CDemoFile::ReadCmdInfo(democmdinfo_t&)
 t CDemoFile::ReadRawData(char*, int)
 t CDemoFile::ReadUserCmd(char*, int&)
@@ -11763,6 +11765,11 @@ r typeinfo for SVC_FixAngle
 r typeinfo for SVC_Prefetch
 r typeinfo for SVC_SetPause
 r typeinfo for CCallbackBase
+r typeinfo for CCallbackImpl<12>
+r typeinfo for CCallbackImpl<1>
+r typeinfo for CCallbackImpl<20>
+r typeinfo for CCallbackImpl<4>
+r typeinfo for CCallbackImpl<8>
 r typeinfo for CCoreDispInfo
 r typeinfo for CDispCollTree
 r typeinfo for CLC_VoiceData
@@ -12102,6 +12109,11 @@ r typeinfo name for SVC_FixAngle
 r typeinfo name for SVC_Prefetch
 r typeinfo name for SVC_SetPause
 r typeinfo name for CCallbackBase
+r typeinfo name for CCallbackImpl<12>
+r typeinfo name for CCallbackImpl<1>
+r typeinfo name for CCallbackImpl<20>
+r typeinfo name for CCallbackImpl<4>
+r typeinfo name for CCallbackImpl<8>
 r typeinfo name for CCoreDispInfo
 r typeinfo name for CDispCollTree
 r typeinfo name for CLC_VoiceData
@@ -12429,6 +12441,11 @@ r vtable for SVC_FixAngle
 r vtable for SVC_Prefetch
 r vtable for SVC_SetPause
 r vtable for CCallbackBase
+r vtable for CCallbackImpl<12>
+r vtable for CCallbackImpl<1>
+r vtable for CCallbackImpl<20>
+r vtable for CCallbackImpl<4>
+r vtable for CCallbackImpl<8>
 r vtable for CCoreDispInfo
 r vtable for CDispCollTree
 r vtable for CLC_VoiceData
