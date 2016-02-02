@@ -972,6 +972,7 @@ t _GLOBAL__sub_I_srand
 t _GLOBAL__sub_I_s_StringCharConversion
 t _GLOBAL__sub_I_stdafx.cpp
 t _GLOBAL__sub_I_steamapicontext
+t _GLOBAL__sub_I_steam_controller_haptics
 t _GLOBAL__sub_I_steamworks_server_sessionid
 t _GLOBAL__sub_I_StumbleMaxCurveRate
 t _GLOBAL__sub_I_survival_gamerules.cpp
@@ -1644,7 +1645,6 @@ t _GLOBAL__sub_I_ZombieNoCull
 t _GLOBAL__sub_I_ZombieNoticeNearRange
 t _GLOBAL__sub_I_ZombieShowSwings
 t _GLOBAL__sub_I_ZombieTracerParticles
-t _GLOBAL__sub_I_ZombieUseTolerance
 t _GLOBAL__sub_I_ZombieVomitInterval
 t _GLOBAL__sub_I_ZombieWitchAllowChangeVictim
 t _GLOBAL__sub_I_ZombieWitchPersonalSpace
@@ -2620,6 +2620,7 @@ U SteamAPI_InitSafe
 U SteamAPI_RegisterCallback
 U SteamAPI_UnregisterCallback
 U SteamClient
+b steam_controller_haptics
 d steamgameserverapicontext
 U SteamGameServer_GetHSteamPipe
 U SteamGameServer_GetHSteamUser
