@@ -87,9 +87,9 @@ U cos@@GLIBC_2.0
 T CreateInterface
 r CSWTCH.191
 r CSWTCH.228
-r CSWTCH.276
 r CSWTCH.278
-r CSWTCH.371
+r CSWTCH.280
+r CSWTCH.373
 d __CTOR_END__
 d __CTOR_LIST__
 d cv
