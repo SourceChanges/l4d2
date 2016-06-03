@@ -91,12 +91,12 @@ U sprintf@@GLIBC_2.0
 U sscanf@@GLIBC_2.0
 U SteamAPI_GetHSteamPipe
 U SteamAPI_GetHSteamUser
-U SteamAPI_InitSafe
+U SteamAPI_Init
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
 U SteamAPI_UnregisterCallback
 U SteamAPI_UnregisterCallResult
-U SteamClient
+U SteamInternal_CreateInterface
 U strcasecmp@@GLIBC_2.0
 U strchr@@GLIBC_2.0
 U strcmp@@GLIBC_2.0

@@ -1752,7 +1752,6 @@ d g_pServerTools
 b g_pShadowEntities
 b g_pSharedChangeInfo
 b g_pSoundEmitterSystem
-U g_pSteamClientGameServer
 b g_pStringTableClientSideChoreoScenes
 b g_pStringTableEffectDispatch
 b g_pStringTableInfoPanel
@@ -2616,15 +2615,15 @@ b staticpropmgr
 d steamapicontext
 U SteamAPI_GetHSteamPipe
 U SteamAPI_GetHSteamUser
-U SteamAPI_InitSafe
+U SteamAPI_Init
 U SteamAPI_RegisterCallback
 U SteamAPI_UnregisterCallback
-U SteamClient
 b steam_controller_haptics
 d steamgameserverapicontext
 U SteamGameServer_GetHSteamPipe
 U SteamGameServer_GetHSteamUser
 b steamGameStats
+U SteamInternal_CreateInterface
 d sTeamNames
 b steamworks_immediate_upload
 b steamworks_server_sessionid
@@ -4502,7 +4501,6 @@ t SENTENCEG_Init()
 t SetScaleMatrix(float, float, float, matrix3x4_t&)
 t void SharedVar_Save<CHandle<CBaseEntity> >(ISave*, CHandle<CBaseEntity>*, int)
 t SolveQuadratic(float, float, float, float&, float&)
-t SteamUserStats()
 t StringLessThan(char const* const&, char const* const&)
 t StringSortFunc(void const*, void const*)
 t Studio_GetMass(CStudioHdr*)
@@ -38255,7 +38253,7 @@ t CSteamWorksGameStatsUploader::LevelShutdownPostEntity()
 t CSteamWorksGameStatsUploader::FrameUpdatePreEntityThink()
 t CSteamWorksGameStatsUploader::FrameUpdatePostEntityThink()
 t CSteamWorksGameStatsUploader::ParseKeyValuesAndSendStats(KeyValues*)
-t CSteamWorksGameStatsUploader::ParseKeyValuesAndSendStats(KeyValues*) [clone .part.23]
+t CSteamWorksGameStatsUploader::ParseKeyValuesAndSendStats(KeyValues*) [clone .part.25]
 t CSteamWorksGameStatsUploader::Steam_OnSteamGameStatsClosed_Server(GameStatsSessionClosed_t*)
 t CSteamWorksGameStatsUploader::Steam_OnSteamGameStatsIssued_Server(GameStatsSessionIssued_t*)
 t CSteamWorksGameStatsUploader::Init()
@@ -55226,11 +55224,13 @@ b FireSystem_AddHeatInRadius(Vector const&, float, float)::tm_fmt
 b MapEntity_ParseAllEntities(char const*, IMapEntityFilter*, bool)::tm_fmt
 r VScriptServerCompileScript(char const*, bool)::pszClearExtensions
 r VScriptServerCompileScript(char const*, bool)::pszEncryptedExtensions
+b SteamInternal_ModuleContext()::ctx
 b TerrorMeasureTravelDistance()::str
 b Interpolator_NameForCurveType(int, bool)::outname
 b PrecachePlayerModelAndMaterials(CBaseAnimating*, char const*, CUtlVector<char const*, CUtlMemory<char const*, int> >*)::tm_fmt
 b GetSequenceLinearMotionAndDuration(CStudioHdr*, int, float const*, Vector*)::msgCount
 d ActivityList_RegisterSharedActivity(char const*, int)::lastActivityIndex
+b SteamGameServerInternal_ModuleContext()::ctx
 b MapEntity_ParseAllEntites_SpawnTemplates(CPointTemplate**, int, CBaseEntity**, HierarchicalSpawnMapData_t*, int)::tm_fmt
 b Bias(float, float)::lastExponent
 b MusicMsg(char*, ...)::string

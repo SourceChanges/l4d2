@@ -52,7 +52,6 @@ U g_nThreadID
 B g_pCVar
 U g_pLastMiniProfiler
 U g_pPhysicsMiniProfilers
-U g_pSteamClientGameServer
 U g_pThreadPool
 U g_pVCR
 U g_Telemetry
@@ -112,12 +111,12 @@ B s_pInterfaceRegs
 U sscanf@@GLIBC_2.0
 U SteamAPI_GetHSteamPipe
 U SteamAPI_GetHSteamUser
-U SteamAPI_InitSafe
+U SteamAPI_Init
 U SteamAPI_RegisterCallback
 U SteamAPI_UnregisterCallback
-U SteamClient
 U SteamGameServer_GetHSteamPipe
 U SteamGameServer_GetHSteamUser
+U SteamInternal_CreateInterface
 U strcasecmp@@GLIBC_2.0
 U strchr@@GLIBC_2.0
 U strcmp@@GLIBC_2.0

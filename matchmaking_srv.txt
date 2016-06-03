@@ -405,12 +405,12 @@ b s_StringCharConversion
 d steamapicontext
 U SteamAPI_GetHSteamPipe
 U SteamAPI_GetHSteamUser
-U SteamAPI_InitSafe
+U SteamAPI_Init
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
 U SteamAPI_UnregisterCallback
 U SteamAPI_UnregisterCallResult
-U SteamClient
+U SteamInternal_CreateInterface
 U strcasecmp@@GLIBC_2.0
 U strchr@@GLIBC_2.0
 U strcmp@@GLIBC_2.0
@@ -3949,6 +3949,7 @@ b V_pretifynum(long long)::output
 b V_pretifynum(long long)::current
 d GetBitForBitnum(int)::bitsForBitnum
 b COM_GetModDirectory()::modDir
+b SteamInternal_ModuleContext()::ctx
 b MM_Title_RichPresence_Update(KeyValues*, KeyValues*)::val
 b MM_Title_RichPresence_Update(KeyValues*, KeyValues*)::val
 b MM_Title_RichPresence_Update(KeyValues*, KeyValues*)::val

@@ -192,13 +192,13 @@ U sscanf@@GLIBC_2.0
 U stderr@@GLIBC_2.0
 U SteamAPI_GetHSteamPipe
 U SteamAPI_GetHSteamUser
-U SteamAPI_InitSafe
+U SteamAPI_Init
 U SteamAPI_IsSteamRunning
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
 U SteamAPI_UnregisterCallback
 U SteamAPI_UnregisterCallResult
-U SteamClient
+U SteamInternal_CreateInterface
 U strcasecmp@@GLIBC_2.0
 U strcasestr@@GLIBC_2.1
 U strcat@@GLIBC_2.0

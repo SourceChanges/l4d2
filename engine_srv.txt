@@ -625,7 +625,6 @@ b g_pSndIOPathPrefix
 b g_pSoundEmitterSystem
 b g_pSoundJob
 b g_pSoundServices
-U g_pSteamClientGameServer
 d g_pSteamSocketMgr
 d g_pStringTableDictionary
 b g_pStudioRender
@@ -1078,6 +1077,8 @@ t __stat
 U stderr@@GLIBC_2.0
 U stdin@@GLIBC_2.0
 U stdout@@GLIBC_2.0
+U SteamAPI_GetHSteamPipe
+U SteamAPI_GetHSteamUser
 U SteamAPI_RegisterCallback
 U SteamAPI_RegisterCallResult
 U SteamAPI_SetBreakpadAppID
@@ -1085,13 +1086,13 @@ U SteamAPI_SetMiniDumpComment
 U SteamAPI_UnregisterCallback
 U SteamAPI_UnregisterCallResult
 U SteamAPI_UseBreakpadCrashHandler
-U SteamClient
 U SteamGameServer_GetHSteamPipe
 U SteamGameServer_GetHSteamUser
 U SteamGameServer_GetIPCCallCount
-U SteamGameServer_InitSafe
 U SteamGameServer_RunCallbacks
 U SteamGameServer_Shutdown
+U SteamInternal_CreateInterface
+U SteamInternal_GameServer_Init
 U strcasecmp@@GLIBC_2.0
 U strcasestr@@GLIBC_2.1
 U strcat@@GLIBC_2.0
@@ -2369,6 +2370,7 @@ t BZ2_hbMakeCodeLengths(unsigned char*, int*, int, int)
 t CalcBarycentricCooefs(Vector const&, Vector const&, Vector const&, Vector const&, float&, float&, float&)
 t CalcDistanceSqrToLine(Vector const&, Vector const&, Vector const&, float*)
 t CalcSqrDistanceToAABB(Vector const&, Vector const&, Vector const&)
+t Cbuf_EscapeCommandArg(char const*, char*, unsigned int)
 t Cbuf_GetCurrentPlayer()
 t CheckSpecialCheatVars()
 t CheckVarRange_Generic(ConVar*, int, int)
@@ -6804,7 +6806,7 @@ t CVProfScope::~CVProfScope() [clone .isra.11]
 t CVProfScope::~CVProfScope() [clone .isra.13]
 t CVProfScope::~CVProfScope() [clone .isra.20]
 t CVProfScope::~CVProfScope() [clone .isra.22]
-t CVProfScope::~CVProfScope() [clone .isra.26]
+t CVProfScope::~CVProfScope() [clone .isra.27]
 t CVProfScope::~CVProfScope() [clone .isra.27]
 t CVProfScope::~CVProfScope() [clone .isra.30]
 t CVProfScope::~CVProfScope() [clone .isra.34]
@@ -12784,6 +12786,7 @@ b CM_BoxTraceAgainstLeafList(Ray_t const&, CTraceListData const&, int, CGameTrac
 r _Host_RunFrame_Server_Async(int)::__FUNCTION__
 b _Host_RunFrame_Server_Async(int)::tm_fmt
 b InitializeStandardMaterials()::autoMutex__
+b SteamInternal_ModuleContext()::ctx
 b PackEntities_NetworkBackDoor(int, CGameClient**, CFrameSnapshot*)::tm_fmt
 b Host_CleanupConVarStringValue(char const*)::clean
 b va(char const*, ...)::string

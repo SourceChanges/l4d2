@@ -1855,9 +1855,9 @@ t CBaseFileSystem::AsyncRelease(FSAsyncControl_t__*)
 t CBaseFileSystem::AsyncSuspend()
 t CBaseFileSystem::EndMapAccess()
 t CBaseFileSystem::FastFileTime(CBaseFileSystem::CSearchPath const*, char const*)
-t CBaseFileSystem::FastFileTime(CBaseFileSystem::CSearchPath const*, char const*) [clone .part.54]
+t CBaseFileSystem::FastFileTime(CBaseFileSystem::CSearchPath const*, char const*) [clone .part.55]
 t CBaseFileSystem::FastFindFile(CBaseFileSystem::CSearchPath const*, char const*)
-t CBaseFileSystem::FastFindFile(CBaseFileSystem::CSearchPath const*, char const*) [clone .part.69]
+t CBaseFileSystem::FastFindFile(CBaseFileSystem::CSearchPath const*, char const*) [clone .part.70]
 t CBaseFileSystem::FindFileName(char const*)
 t CBaseFileSystem::GetLocalCopy(char const*)
 t CBaseFileSystem::GetLocalPath(char const*, char*, int)
@@ -1934,7 +1934,7 @@ t CBaseFileSystem::CSearchPathsVisits::~CSearchPathsVisits()
 t CBaseFileSystem::CSearchPathsVisits::~CSearchPathsVisits()
 t CBaseFileSystem::DiscardPreloadData()
 t CBaseFileSystem::FindNextFileHelper(CBaseFileSystem::FindData_t*, int*)
-t CBaseFileSystem::FindNextFileHelper(CBaseFileSystem::FindData_t*, int*) [clone .part.148]
+t CBaseFileSystem::FindNextFileHelper(CBaseFileSystem::FindData_t*, int*) [clone .part.149]
 b CBaseFileSystem::m_ExcludeFilePaths
 t CBaseFileSystem::OpenedFileLessFunc(CBaseFileSystem::COpenedFile const&, CBaseFileSystem::COpenedFile const&)
 t CBaseFileSystem::AddPackFileFromPath(char const*, char const*, bool, char const*)
@@ -1946,7 +1946,7 @@ t CBaseFileSystem::AsyncFinishAllWrites()
 t CBaseFileSystem::CSearchPathsIterator::CopySearchPaths(CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath, int> > const&)
 t CBaseFileSystem::CSearchPathsIterator::GetNext()
 t CBaseFileSystem::CSearchPathsIterator::GetFirst()
-t CBaseFileSystem::CSearchPathsIterator::GetFirst() [clone .constprop.250]
+t CBaseFileSystem::CSearchPathsIterator::GetFirst() [clone .constprop.251]
 t CBaseFileSystem::CSearchPathsIterator::CSearchPathsIterator(CBaseFileSystem*, char const**, char const*, PathTypeFilter_t)
 t CBaseFileSystem::CSearchPathsIterator::CSearchPathsIterator(CBaseFileSystem*, char const**, char const*, PathTypeFilter_t)
 t CBaseFileSystem::CSearchPathsIterator::~CSearchPathsIterator()
@@ -1983,7 +1983,7 @@ t CBaseFileSystem::MarkPathIDByRequestOnly(char const*, bool)
 t CBaseFileSystem::RemoveAllMapSearchPaths()
 t CBaseFileSystem::Trace_DumpUnclosedFiles()
 t CBaseFileSystem::FullPathToRelativePathEx(char const*, char const*, char*, int)
-t CBaseFileSystem::FullPathToRelativePathEx(char const*, char const*, char*, int) [clone .part.61]
+t CBaseFileSystem::FullPathToRelativePathEx(char const*, char const*, char*, int) [clone .part.62]
 b CBaseFileSystem::m_bFoundXboxImageInCache
 t CBaseFileSystem::IsInstalledToXboxHDDCache()
 t CBaseFileSystem::FindFileAbsoluteListHelper(CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, CBaseFileSystem::FindData_t&, char const*)
