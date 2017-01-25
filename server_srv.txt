@@ -185,7 +185,7 @@ r CSWTCH.1220
 r CSWTCH.1220
 r CSWTCH.1232
 r CSWTCH.1238
-r CSWTCH.1240
+r CSWTCH.1243
 r CSWTCH.1252
 r CSWTCH.1255
 r CSWTCH.1257
@@ -197,13 +197,13 @@ r CSWTCH.1294
 r CSWTCH.1306
 r CSWTCH.131
 r CSWTCH.1312
-r CSWTCH.1322
 r CSWTCH.1324
 r CSWTCH.1327
 r CSWTCH.1335
 r CSWTCH.1344
 r CSWTCH.1353
 r CSWTCH.1368
+r CSWTCH.1386
 r CSWTCH.1392
 r CSWTCH.1445
 r CSWTCH.1460
@@ -249,11 +249,11 @@ r CSWTCH.46
 r CSWTCH.4752
 r CSWTCH.4754
 r CSWTCH.48
-r CSWTCH.5416
-r CSWTCH.5666
-r CSWTCH.569
-r CSWTCH.571
-r CSWTCH.573
+r CSWTCH.5418
+r CSWTCH.5668
+r CSWTCH.570
+r CSWTCH.572
+r CSWTCH.574
 r CSWTCH.607
 r CSWTCH.610
 r CSWTCH.612
@@ -685,6 +685,7 @@ b g_ChoreoStringPool
 b g_CInfoItemPosition_ScriptDesc
 d g_ClassInfos
 b g_CNavMesh_ScriptDesc
+b g_CNetPropManager_ScriptDesc
 b g_Collisions
 b g_ColorSurvivor
 b g_ColorZombie
@@ -1315,6 +1316,7 @@ t _GLOBAL__sub_I__ZN15CFuncNavBlocker9m_DataMapE
 t _GLOBAL__sub_I__ZN15ChargerBehavior22InitialContainedActionEP7Charger
 t _GLOBAL__sub_I__ZN15chargerPrecache18CResourcePrecacher5CacheEP16IPrecacheHandlerbP16ResourceList_t(bool)
 t _GLOBAL__sub_I__ZN15CMoveableCameraC2Ev
+t _GLOBAL__sub_I__ZN15CNetPropManagerD2Ev
 t _GLOBAL__sub_I__ZN15CParticleSystem14GetServerClassEv
 t _GLOBAL__sub_I__ZN15CPlayerResource14GetServerClassEv
 t _GLOBAL__sub_I__ZN15CPointSpotlight9m_DataMapE
@@ -1661,6 +1663,7 @@ w __gmon_start__
 b g_mp_ServerPhysicsSimulate
 b g_MultiDamage
 d g_nActivityListVersion
+b g_netPropManager
 b g_NetworkPropertyEventMgr
 d g_nEventListVersion
 b g_nInsideDispatchUpdateTransmitState
@@ -4359,6 +4362,7 @@ t ScriptClassDesc_t* GetScriptDesc<CBaseEntity>(CBaseEntity*)
 t ScriptClassDesc_t* GetScriptDesc<CTerrorPlayer>(CTerrorPlayer*)
 t ScriptClassDesc_t* GetScriptDesc<CBaseAnimating>(CBaseAnimating*)
 t ScriptClassDesc_t* GetScriptDesc<CEnvEntityMaker>(CEnvEntityMaker*)
+t ScriptClassDesc_t* GetScriptDesc<CNetPropManager>(CNetPropManager*)
 t ScriptClassDesc_t* GetScriptDesc<CInfoItemPosition>(CInfoItemPosition*)
 t ScriptClassDesc_t* GetScriptDesc<CRuleScriptBridge>(CRuleScriptBridge*)
 t ScriptClassDesc_t* GetScriptDesc<CPointScriptTemplate>(CPointScriptTemplate*)
@@ -4577,7 +4581,7 @@ t DebugConstraint(CBaseEntity*)
 t DebugDumpEntity(char const*, ...)
 t DescribeSubject(CBaseEntity*)
 t DoIncludeScript(char const*, HSCRIPT__*)
-t DoIncludeScript(char const*, HSCRIPT__*) [clone .part.200]
+t DoIncludeScript(char const*, HSCRIPT__*) [clone .part.242]
 t DumpScriptScope(CBasePlayer*, char const*)
 t EntityTouch_Add(CBaseEntity*)
 t ExplosionCreate(Vector const&, QAngle const&, CBaseEntity*, int, int, bool, float, bool, bool, int)
@@ -6450,7 +6454,7 @@ t UTIL_IsFacingWithinTolerance(CBaseEntity*, CBaseEntity*, float, float*)
 t UTIL_PointOnLineNearestPoint(Vector const&, Vector const&, Vector const&, bool)
 t VScriptServerReplaceClosures(char const*, HSCRIPT__*, bool)
 t VScriptServerScriptErrorFunc(ScriptErrorLevel_t, char const*)
-t VScriptServerScriptErrorFunc(ScriptErrorLevel_t, char const*) [clone .part.404]
+t VScriptServerScriptErrorFunc(ScriptErrorLevel_t, char const*) [clone .part.489]
 t VScriptServerToggleGameDebug()
 t ActivityList_AddActivityEntry(char const*, int, bool)
 t AimTarget_ForceRepopulateList()
@@ -8034,6 +8038,7 @@ b guard variable for HunterBehavior::OnContact(Hunter*, CBaseEntity*, CGameTrace
 b guard variable for JockeyBehavior::OnContact(Jockey*, CBaseEntity*, CGameTrace*)::pressAltFireButton
 b guard variable for SmokerBehavior::OnContact(Smoker*, CBaseEntity*, CGameTrace*)::pressAltFireButton
 b guard variable for ChargerBehavior::OnContact(Charger*, CBaseEntity*, CGameTrace*)::pressAltFireButton
+b guard variable for CNetPropManager::GetPropVectorArray(HSCRIPT__*, char const*, int)::vAng
 b guard variable for CResponseSystem::ParseOneCriterion(char const*)::dummy
 b guard variable for SpitterBehavior::OnContact(Spitter*, CBaseEntity*, CGameTrace*)::pressAltFireButton
 b guard variable for CTerrorGameRules::Think()::sv_cheats
@@ -8166,12 +8171,14 @@ b guard variable for CUtlRBTree<CUtlMap<char const*, CBitVec<32>, int>::Node_t, 
 b guard variable for CUtlRBTree<CUtlMap<char const*, float, int>::Node_t, int, CUtlMap<char const*, float, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, float, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, int, int>::Node_t, int, CUtlMap<char const*, int, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
+b guard variable for CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, CBaseEntity*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, CUserMessage*, int>::Node_t, int, CUtlMap<char const*, CUserMessage*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUserMessage*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, IEntityFactory*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
+b guard variable for CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, char const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 b guard variable for CUtlRBTree<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short, CUtlMap<unsigned long long, KeyValues*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
@@ -9220,6 +9227,8 @@ b vec2_origin
 b vec2_origin
 b vec2_origin
 b vec2_origin
+b vec2_origin
+b vec4_origin
 b vec4_origin
 b vec4_origin
 b vec4_origin
@@ -10984,6 +10993,8 @@ b vec2_invalid
 b vec2_invalid
 b vec2_invalid
 b vec2_invalid
+b vec2_invalid
+b vec4_invalid
 b vec4_invalid
 b vec4_invalid
 b vec4_invalid
@@ -12106,7 +12117,7 @@ b weapon_vomitjar
 t z_play_activity(CCommand const&)
 b z_spawn_command
 b z_wound_command
-t AnalysisProgress(char const*, int, int, bool) [clone .constprop.134]
+t AnalysisProgress(char const*, int, int, bool) [clone .constprop.135]
 b callvote_command
 b cast_ray_command
 b ch_createairboat
@@ -12161,7 +12172,7 @@ b g_Witch_ClassReg
 b info_changelevel
 b info_mass_center
 b info_player_logo
-t IsNodeOverlapped(Vector const&, Vector const&) [clone .constprop.135]
+t IsNodeOverlapped(Vector const&, Vector const&) [clone .constprop.136]
 b jockeyme_command
 b logic_game_event
 b logic_navigation
@@ -12464,7 +12475,7 @@ b weapon_rifle_sg552
 b weapon_rifle_spawn
 b weapon_smoker_claw
 t Benchmark_ValidTime()
-t BuildTeleportList_r(CBaseEntity*, CUtlVector<TeleportListEntry_t, CUtlMemory<TeleportListEntry_t, int> >&) [clone .constprop.525]
+t BuildTeleportList_r(CBaseEntity*, CUtlVector<TeleportListEntry_t, CUtlMemory<TeleportListEntry_t, int> >&) [clone .constprop.531]
 b cameraFinaleLossStr
 b CmdWarpToCheckpoint
 t ComputeCenterMatrix(Vector const&, QAngle const&, Vector const&, Vector const&, matrix3x4_t&) [clone .constprop.44]
@@ -12693,7 +12704,7 @@ b weapon_hunting_rifle
 b weapon_molotov_spawn
 b weapon_pistol_magnum
 t WriteUserCmdDeltaInt(bf_write*, char*, int, int, int) [clone .isra.14]
-t AddDamageTypeToString(char*, int, int, int, char const*, bool*) [clone .constprop.1171]
+t AddDamageTypeToString(char*, int, int, int, char const*, bool*) [clone .constprop.1174]
 t AttributeAutocomplete(char const*, char (*) [64])
 t CaptionCreateCallback(char const*, char const*, char const*, void*)
 b ClearAllNavAttributes
@@ -12798,7 +12809,7 @@ b weapon_shotgun_chrome
 b weapon_vomitjar_spawn
 b z_unwound_all_command
 b ClearSpecTargetCommand
-t ComputePushStartMatrix(matrix3x4_t&, CBaseEntity*, pushblock_t const&) [clone .constprop.530]
+t ComputePushStartMatrix(matrix3x4_t&, CBaseEntity*, pushblock_t const&) [clone .constprop.536]
 t ComputeSeeTestPosition(Vector*, CBaseCombatCharacter*) [clone .constprop.80]
 t ComputeSeparatingPlane(matrix3x4_t const&, matrix3x4_t const&, Vector const&, Vector const&, float, cplane_t*) [clone .constprop.43]
 b director_start_command
@@ -12837,6 +12848,7 @@ d g_InfectedIgniteScream
 b g_KeyValues2ErrorStack
 d g_nCurrentChapterIndex
 b g_RocketTrail_ClassReg
+b g_SharedVarSaveDataOps
 b g_SharedVarSaveDataOps
 b g_SharedVarSaveDataOps
 b g_SharedVarSaveDataOps
@@ -13919,6 +13931,7 @@ t SelectCornerToCornerAreas(NavAreaCollector*) [clone .constprop.141]
 b sv_anim_dumpstate_command
 b sv_playerperfhistorycount
 t sv_soundemitter_filecheck(CCommand const&)
+b UNSPECIFIED_LOGGING_COLOR
 b UNSPECIFIED_LOGGING_COLOR
 b UNSPECIFIED_LOGGING_COLOR
 b UNSPECIFIED_LOGGING_COLOR
@@ -16848,6 +16861,8 @@ t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, int>::Node_t, int>, int>:
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, int>::Node_t, int>, int>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short>::Grow(int)
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short>::Purge()
+t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int>::Grow(int)
+t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int>::Grow(int)
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short>, unsigned short>::Grow(int)
@@ -16860,6 +16875,8 @@ t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, FileWeaponInfo_t*, unsigned sh
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short>, unsigned short>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int>::Grow(int)
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int>::Purge()
+t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int>::Grow(int)
+t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short>::Grow(int)
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short>::Purge()
 t CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short>, unsigned short>::Grow(int)
@@ -17672,6 +17689,12 @@ t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, 
 t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::Insert(CUtlMap<char const*, int, unsigned short>::Node_t const&)
 t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::NewNode()
 t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::RemoveAll()
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::RotateLeft(int)
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::RotateRight(int)
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::InsertRebalance(int)
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::Insert(CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t const&)
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::NewNode()
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::RemoveAll()
 t CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::RotateLeft(int)
 t CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::RotateRight(int)
 t CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::InsertRebalance(int)
@@ -17708,6 +17731,12 @@ t CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char con
 t CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::Insert(CUtlMap<char const*, CNavArea*, int>::Node_t const&)
 t CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::NewNode()
 t CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::RemoveAll()
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::RotateLeft(int)
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::RotateRight(int)
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::InsertRebalance(int)
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::Insert(CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t const&)
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::NewNode()
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::RemoveAll()
 t CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::RotateLeft(unsigned short)
 t CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::RotateRight(unsigned short)
 t CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::InsertRebalance(unsigned short)
@@ -18649,7 +18678,7 @@ t CBaseEntity::ToggleFlag(int)
 t CBaseEntity::TraceBleed(float, Vector const&, CGameTrace*, int)
 t CBaseEntity::UpdateCell()
 t CBaseEntity::AcceptInput(char const*, CBaseEntity*, CBaseEntity*, variant_t, int)
-t CBaseEntity::AcceptInput(char const*, CBaseEntity*, CBaseEntity*, variant_t, int) [clone .part.259]
+t CBaseEntity::AcceptInput(char const*, CBaseEntity*, CBaseEntity*, variant_t, int) [clone .part.262]
 t CBaseEntity::CanBeSeenBy(CAI_BaseNPC*)
 t CBaseEntity::DamageDecal(int, int)
 t CBaseEntity::DeathNotice(CBaseEntity*)
@@ -18813,6 +18842,7 @@ t CBaseEntity::RebaseThinkTicks(bool)
 t CBaseEntity::ScriptGetEHandle()
 t CBaseEntity::ScriptGetForward()
 t CBaseEntity::ScriptSetForward(Vector const&)
+t CBaseEntity::ScriptTakeDamage(float, int, HSCRIPT__*)
 t CBaseEntity::SetAllowPrecache(bool)
 t CBaseEntity::SetLocalVelocity(Vector const&)
 t CBaseEntity::SetScaledPhysics(IPhysicsObject*)
@@ -20431,7 +20461,7 @@ t CVProfScope::~CVProfScope() [clone .isra.49]
 t CVProfScope::~CVProfScope() [clone .isra.51]
 t CVProfScope::~CVProfScope() [clone .isra.51]
 t CVProfScope::~CVProfScope() [clone .isra.52]
-t CVProfScope::~CVProfScope() [clone .isra.53]
+t CVProfScope::~CVProfScope() [clone .isra.52]
 t CVProfScope::~CVProfScope() [clone .isra.55]
 t CVProfScope::~CVProfScope() [clone .isra.56]
 t CVProfScope::~CVProfScope() [clone .isra.59]
@@ -22342,9 +22372,9 @@ t CTutorLesson::~CTutorLesson()
 t CTutorLesson::~CTutorLesson()
 t CTutorLesson::~CTutorLesson()
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool)
-t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.1170]
-t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.457]
-t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.526]
+t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.1173]
+t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.532]
+t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .constprop.553]
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .part.56] [clone .constprop.63]
 t CVariantBase<CVariantDefaultAllocator>::ConvertToCopiedData(bool) [clone .part.95] [clone .constprop.113]
 t CWatcherList::RemoveWatcher(CBaseEntity*)
@@ -23777,7 +23807,7 @@ t CTerrorPlayer::OnLeaveActiveState()
 t CTerrorPlayer::OnLeaveRescueState()
 t CTerrorPlayer::OnReleasedByTongue()
 t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&)
-t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&) [clone .part.941]
+t CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&) [clone .part.944]
 t CTerrorPlayer::OnTakeDamage_Alive(CTakeDamageInfo const&)
 t CTerrorPlayer::OnUseEntityChanged()
 t CTerrorPlayer::OnZombieStateAlert()
@@ -23833,7 +23863,7 @@ t CTerrorPlayer::OnPlayerDisconnected(CTerrorPlayer*)
 t CTerrorPlayer::OnPreThinkGhostState()
 t CTerrorPlayer::OnStartBeingPummeled(CTerrorPlayer*)
 t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&)
-t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&) [clone .part.993]
+t CTerrorPlayer::OnTakeDamageInternal(CTakeDamageInfo&) [clone .part.996]
 t CTerrorPlayer::OnZombieStateEngaged()
 t CTerrorPlayer::PassesObserverFilter(CBaseEntity const*)
 t CTerrorPlayer::ProhibitJumpingUntil(float)
@@ -28804,6 +28834,32 @@ t CMultiplayRules::CMultiplayRules()
 t CMultiplayRules::~CMultiplayRules()
 t CMultiplayRules::~CMultiplayRules()
 t CMultiplayRules::~CMultiplayRules()
+t CNetPropManager::GetPropInt(HSCRIPT__*, char const*)
+t CNetPropManager::SetPropInt(HSCRIPT__*, char const*, int)
+t CNetPropManager::GetPropType(HSCRIPT__*, char const*)
+t CNetPropManager::GetPropFloat(HSCRIPT__*, char const*)
+t CNetPropManager::SetPropFloat(HSCRIPT__*, char const*, float)
+t CNetPropManager::GetPropEntity(HSCRIPT__*, char const*)
+t CNetPropManager::GetPropString(HSCRIPT__*, char const*)
+t CNetPropManager::GetPropVector(HSCRIPT__*, char const*)
+t CNetPropManager::SetPropEntity(HSCRIPT__*, char const*, HSCRIPT__*)
+t CNetPropManager::SetPropString(HSCRIPT__*, char const*, char const*)
+t CNetPropManager::SetPropVector(HSCRIPT__*, char const*, Vector)
+t CNetPropManager::GetPropIntArray(HSCRIPT__*, char const*, int)
+t CNetPropManager::SetPropIntArray(HSCRIPT__*, char const*, int, int)
+t CNetPropManager::GetPropArraySize(HSCRIPT__*, char const*)
+t CNetPropManager::GetEntityPropInfo(CBaseEntity*, char const*, int)
+t CNetPropManager::GetPropFloatArray(HSCRIPT__*, char const*, int)
+t CNetPropManager::SetPropFloatArray(HSCRIPT__*, char const*, float, int)
+t CNetPropManager::GetPropEntityArray(HSCRIPT__*, char const*, int)
+t CNetPropManager::GetPropStringArray(HSCRIPT__*, char const*, int)
+t CNetPropManager::GetPropVectorArray(HSCRIPT__*, char const*, int)
+t CNetPropManager::SetPropEntityArray(HSCRIPT__*, char const*, HSCRIPT__*, int)
+t CNetPropManager::SetPropStringArray(HSCRIPT__*, char const*, char const*, int)
+t CNetPropManager::SetPropVectorArray(HSCRIPT__*, char const*, Vector, int)
+t CNetPropManager::HasProp(HSCRIPT__*, char const*)
+t CNetPropManager::~CNetPropManager()
+t CNetPropManager::~CNetPropManager()
 t CParticleSystem::GetBaseMap()
 t CParticleSystem::InputStart(inputdata_t&)
 t CParticleSystem::GetDataDescMap()
@@ -32913,7 +32969,7 @@ t CUtlCachedFileData<CModelSoundsCache>::FileNameHandleLessFunc(CUtlCachedFileDa
 t CUtlCachedFileData<CModelSoundsCache>::Get(char const*)
 t CUtlCachedFileData<CModelSoundsCache>::Init()
 t CUtlCachedFileData<CModelSoundsCache>::Save()
-t CUtlCachedFileData<CModelSoundsCache>::Shutdown() [clone .part.502] [clone .constprop.523]
+t CUtlCachedFileData<CModelSoundsCache>::Shutdown() [clone .part.508] [clone .constprop.529]
 t CUtlCachedFileData<CModelSoundsCache>::~CUtlCachedFileData()
 t CUtlCachedFileData<CModelSoundsCache>::~CUtlCachedFileData()
 t CUtlCachedFileData<CModelSoundsCache>::~CUtlCachedFileData()
@@ -35200,16 +35256,38 @@ t CMemberScriptBinding2<CBaseEntity*, bool (CBaseEntity::*)(char const*, char co
 t CMemberScriptBinding2<CBaseEntity*, void (CBaseEntity::*)(float, float), void, float, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CBaseEntity*, void (CBaseEntity::*)(char const*, char const*), void, char const*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CEnvEntityMaker*, void (CEnvEntityMaker::*)(Vector const&, Vector const&), void, Vector const&, Vector const&>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, bool (CNetPropManager::*)(HSCRIPT__*, char const*), bool, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, float (CNetPropManager::*)(HSCRIPT__*, char const*), float, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, int (CNetPropManager::*)(HSCRIPT__*, char const*), int, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, HSCRIPT__* (CNetPropManager::*)(HSCRIPT__*, char const*), HSCRIPT__*, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, char const* (CNetPropManager::*)(HSCRIPT__*, char const*), char const*, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding2<CNetPropManager*, Vector const& (CNetPropManager::*)(HSCRIPT__*, char const*), Vector const&, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CRuleScriptBridge*, HSCRIPT__* (CRuleScriptBridge::*)(HSCRIPT__*, float), HSCRIPT__*, HSCRIPT__*, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CPointScriptTemplate*, void (CPointScriptTemplate::*)(HSCRIPT__*, HSCRIPT__*), void, HSCRIPT__*, HSCRIPT__*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CPointScriptTemplate*, void (CPointScriptTemplate::*)(char const*, HSCRIPT__*), void, char const*, HSCRIPT__*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CScriptConvarAccessor*, char const* (CScriptConvarAccessor::*)(char const*, int), char const*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CScriptConvarAccessor*, void (CScriptConvarAccessor::*)(char const*, CVariantBase<CVariantDefaultAllocator>), void, char const*, CVariantBase<CVariantDefaultAllocator> >::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding2<CScriptEntityIterator*, HSCRIPT__* (CScriptEntityIterator::*)(HSCRIPT__*, char const*), HSCRIPT__*, HSCRIPT__*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CBaseEntity*, void (CBaseEntity::*)(float, int, HSCRIPT__*), void, float, int, HSCRIPT__*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding3<CBaseEntity*, void (CBaseEntity::*)(char const*, float, float), void, char const*, float, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding3<CBaseEntity*, void (CBaseEntity::*)(char const*, char const*, float), void, char const*, char const*, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, float (CNetPropManager::*)(HSCRIPT__*, char const*, int), float, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, int (CNetPropManager::*)(HSCRIPT__*, char const*, int), int, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, HSCRIPT__* (CNetPropManager::*)(HSCRIPT__*, char const*, int), HSCRIPT__*, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, char const* (CNetPropManager::*)(HSCRIPT__*, char const*, int), char const*, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, Vector const& (CNetPropManager::*)(HSCRIPT__*, char const*, int), Vector const&, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, Vector), void, HSCRIPT__*, char const*, Vector>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, float), void, HSCRIPT__*, char const*, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, int), void, HSCRIPT__*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, HSCRIPT__*), void, HSCRIPT__*, char const*, HSCRIPT__*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding3<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, char const*), void, HSCRIPT__*, char const*, char const*>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding3<CScriptEntityIterator*, HSCRIPT__* (CScriptEntityIterator::*)(char const*, Vector const&, float), HSCRIPT__*, char const*, Vector const&, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding3<CScriptEntityIterator*, HSCRIPT__* (CScriptEntityIterator::*)(HSCRIPT__*, Vector const&, float), HSCRIPT__*, HSCRIPT__*, Vector const&, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding4<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, Vector, int), void, HSCRIPT__*, char const*, Vector, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding4<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, float, int), void, HSCRIPT__*, char const*, float, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding4<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, int, int), void, HSCRIPT__*, char const*, int, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding4<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, HSCRIPT__*, int), void, HSCRIPT__*, char const*, HSCRIPT__*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
+t CMemberScriptBinding4<CNetPropManager*, void (CNetPropManager::*)(HSCRIPT__*, char const*, char const*, int), void, HSCRIPT__*, char const*, char const*, int>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 t CMemberScriptBinding4<CScriptEntityIterator*, HSCRIPT__* (CScriptEntityIterator::*)(HSCRIPT__*, char const*, Vector const&, float), HSCRIPT__*, HSCRIPT__*, char const*, Vector const&, float>::Call(void*, void*, CVariantBase<CVariantDefaultAllocator>*, int, CVariantBase<CVariantDefaultAllocator>*)
 b CMessage_DataDescInit::g_DataMapHolder
 b CMolotov_DataDescInit::g_DataMapHolder
@@ -37961,7 +38039,7 @@ t CDefSaveRestoreBlockHandler::Restore(IRestore*, bool)
 t CDefSaveRestoreBlockHandler::PostSave()
 t CDisablePredictionFiltering::CDisablePredictionFiltering(bool)
 t CDisablePredictionFiltering::CDisablePredictionFiltering(bool)
-t CDisablePredictionFiltering::~CDisablePredictionFiltering() [clone .constprop.1173]
+t CDisablePredictionFiltering::~CDisablePredictionFiltering() [clone .constprop.1176]
 t CDmxSerializationDictionary::GetRootElement(int)
 t CDmxSerializationDictionary::BuildElementList(CDmxElement*, bool)
 t CDmxSerializationDictionary::BuildElementList_R(CDmxElement*, bool, bool)
@@ -40628,7 +40706,7 @@ t CGasCan::~CGasCan()
 t CHandle<CBaseEntity>::operator=(CBaseEntity const*)
 t CHandle<CBaseEntity>::CHandle(CBaseEntity*)
 t CHandle<CBaseEntity>::CHandle(CBaseEntity*)
-t CHandle<CTerrorPlayer>::CHandle(CTerrorPlayer*) [clone .constprop.1172]
+t CHandle<CTerrorPlayer>::CHandle(CTerrorPlayer*) [clone .constprop.1175]
 t Charger::GetBaseMap()
 t Charger::OnTakeDamage(CTakeDamageInfo const&)
 t Charger::GetDataDescMap()
@@ -41266,7 +41344,7 @@ t CNavArea::~CNavArea()
 t CNavMesh::AddNavArea(CNavArea*)
 t CNavMesh::SampleStep()
 t bool CNavMesh::StitchMesh<AreaSet>(AreaSet&)
-t bool CNavMesh::ForAllAreas<JumpConnector>(JumpConnector&) [clone .isra.84] [clone .constprop.133]
+t bool CNavMesh::ForAllAreas<JumpConnector>(JumpConnector&) [clone .isra.84] [clone .constprop.134]
 t CNavMesh::OnNodeAdded(CNavNode*)
 t CNavMesh::RemoveNodes()
 t CNavMesh::SetEditMode(CNavMesh::EditModeType)
@@ -41638,6 +41716,9 @@ t CUtlDict<int, int>::RemoveAll()
 t CUtlDict<int, int>::~CUtlDict()
 t CUtlDict<int, int>::~CUtlDict()
 t CUtlDict<int, unsigned short>::RemoveAll()
+t CUtlDict<CNetPropManager::PropInfo_t, int>::Insert(char const*, CNetPropManager::PropInfo_t const&)
+t CUtlDict<CNetPropManager::PropInfo_t, int>::~CUtlDict()
+t CUtlDict<CNetPropManager::PropInfo_t, int>::~CUtlDict()
 t CUtlDict<CDecalEmitterSystem::DecalEntry, int>::Purge()
 t CUtlDict<CUserMessage*, int>::RemoveAll()
 t CUtlDict<CUserMessage*, int>::~CUtlDict()
@@ -43169,12 +43250,14 @@ t CUtlRBTree<CUtlMap<char const*, float, int>::Node_t, int, CUtlMap<char const*,
 t CUtlRBTree<CUtlMap<char const*, int, int>::Node_t, int, CUtlMap<char const*, int, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, int>::Node_t, int>, int> >::NextInorder(int) const
 t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const
+t CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::NextInorder(int) const
 t CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::NextInorder(int) const
 t CUtlRBTree<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, CBaseEntity*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<char const*, CUserMessage*, int>::Node_t, int, CUtlMap<char const*, CUserMessage*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUserMessage*, int>::Node_t, int>, int> >::NextInorder(int) const
 t CUtlRBTree<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, IEntityFactory*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::NextInorder(int) const
+t CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::NextInorder(int) const
 t CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, char const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
 t CUtlRBTree<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short, CUtlMap<unsigned long long, KeyValues*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short>, unsigned short> >::NextInorder(unsigned short) const
@@ -44082,6 +44165,8 @@ t CDamageModifier::GetCharacter() const
 t CDamageModifier::IsDamageDoneToMe() const
 t CFuncTrackTrain::IsBaseTrain() const
 t ChargerBehavior::GetName() const
+t CNetPropManager::SearchDataMap(datamap_t*, char const*) const
+t CNetPropManager::SearchSendTable(SendTable*, char const*) const
 t CPropMountedGun::IsOccupied() const
 t CPropMountedGun::ShouldCollide(int, int) const
 t CPropMountedGun::GetStandPosition(Vector*) const
@@ -45573,11 +45658,13 @@ t CUtlDict<CBitVec<32>, int>::Find(char const*) const
 t CUtlDict<float, int>::Find(char const*) const
 t CUtlDict<int, int>::Find(char const*) const
 t CUtlDict<int, unsigned short>::Find(char const*) const
+t CUtlDict<CNetPropManager::PropInfo_t, int>::Find(char const*) const
 t CUtlDict<CDecalEmitterSystem::DecalEntry, int>::Find(char const*) const
 t CUtlDict<CUserMessage*, int>::Find(char const*) const
 t CUtlDict<IEntityFactory*, unsigned short>::Find(char const*) const
 t CUtlDict<FileWeaponInfo_t*, unsigned short>::Find(char const*) const
 t CUtlDict<CNavArea*, int>::Find(char const*) const
+t CUtlDict<CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Find(char const*) const
 t INextBot::GetRangeTo(CBaseEntity*) const
 t INextBot::GetRangeTo(Vector const&) const
 t INextBot::IsImmobile() const
@@ -54681,6 +54768,7 @@ b ScriptClassDesc_t* GetScriptDesc<CBaseEntity>(CBaseEntity*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CTerrorPlayer>(CTerrorPlayer*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CBaseAnimating>(CBaseAnimating*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CEnvEntityMaker>(CEnvEntityMaker*)::bInitialized
+b ScriptClassDesc_t* GetScriptDesc<CNetPropManager>(CNetPropManager*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CInfoItemPosition>(CInfoItemPosition*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CRuleScriptBridge>(CRuleScriptBridge*)::bInitialized
 b ScriptClassDesc_t* GetScriptDesc<CPointScriptTemplate>(CPointScriptTemplate*)::bInitialized
@@ -55547,6 +55635,7 @@ b CAchievementMgr::GetAchievementByName(char const*, int)::tm_fmt
 b CCSGameMovement::CheckForLadders(bool)::tm_fmt
 d CCSHLTVDirector::GetModEvents()::s_modevents
 b ChargerBehavior::OnContact(Charger*, CBaseEntity*, CGameTrace*)::pressAltFireButton
+b CNetPropManager::GetPropVectorArray(HSCRIPT__*, char const*, int)::vAng
 b CPropMountedGun::FireThink()::tm_fmt
 b CResponseSystem::ParseOneCriterion(char const*)::dummy
 b CResponseSystem::ParseRule()::instancedCriteria
@@ -55919,12 +56008,14 @@ d CUtlRBTree<CUtlMap<char const*, CBitVec<32>, int>::Node_t, int, CUtlMap<char c
 d CUtlRBTree<CUtlMap<char const*, float, int>::Node_t, int, CUtlMap<char const*, float, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, float, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, int, int>::Node_t, int, CUtlMap<char const*, int, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, int, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, int, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
+d CUtlRBTree<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int, CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNetPropManager::PropInfo_t, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int, CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CDecalEmitterSystem::DecalEntry, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, CBaseEntity*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CBaseEntity*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, CUserMessage*, int>::Node_t, int, CUtlMap<char const*, CUserMessage*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUserMessage*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, IEntityFactory*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, IEntityFactory*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, FileWeaponInfo_t*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, CNavArea*, int>::Node_t, int, CUtlMap<char const*, CNavArea*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CNavArea*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
+d CUtlRBTree<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int, CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CUtlDict<CNetPropManager::PropInfo_t, int>*, int>::Node_t, int>, int> >::Links(int) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, AI_CriteriaSet::CritEntry_t const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 d CUtlRBTree<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short, CUtlMap<char const*, char const*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, char const*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
 d CUtlRBTree<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short, CUtlMap<unsigned long long, KeyValues*, unsigned short>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned long long, KeyValues*, unsigned short>::Node_t, unsigned short>, unsigned short> >::Links(unsigned short) const::s_Sentinel
