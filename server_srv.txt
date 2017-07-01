@@ -6743,7 +6743,7 @@ t LogDamage(CTerrorPlayer*, CTakeDamageInfo const&, DamageResolutionType)
 t LogDamage(CTerrorPlayer*, CTakeDamageInfo const&, DamageResolutionType) [clone .part.233]
 t MD5_Print(unsigned char*, int)
 t MD5Update(MD5Context_t*, unsigned char const*, unsigned int)
-t nexttoken(char*, char const*, char)
+t nexttoken(char*, unsigned int, char const*, char)
 t ParseFile(char*, char*, bool*)
 t ParseFile(char const*, char*, bool*, characterset_t*)
 t PropIsGib(CBaseEntity*)

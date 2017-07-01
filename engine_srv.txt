@@ -1312,6 +1312,7 @@ t __wrap_utimes
 t __wrap___xstat
 t __wrap___xstat64
 U write@@GLIBC_2.0
+t __x86.get_pc_thunk.bx
 U __xmknod@@GLIBC_2.0
 U __xstat64@@GLIBC_2.2
 U __xstat@@GLIBC_2.0
@@ -3113,6 +3114,7 @@ t Key_Event(InputEvent_t const&)
 t MD5_Print(unsigned char*, int)
 t MD5Update(MD5Context_t*, unsigned char const*, unsigned int)
 t NextGetch()
+t nexttoken(char*, unsigned int, char const*, char)
 t ParseFile(char*, char*, bool*)
 t ParseFile(char const*, char*, bool*, characterset_t*)
 t pathmatch(char const*, char**, bool, char*, unsigned int)
