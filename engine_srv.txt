@@ -7700,7 +7700,7 @@ t CMapLoadHelper::InitFromMemory(model_t*, void const*, int)
 t CMapLoadHelper::LoadLumpElement(int, int, void*)
 t CMapLoadHelper::FreeLightingLump()
 t CMapLoadHelper::Init(model_t*, char const*)
-t CMapLoadHelper::Init(model_t*, char const*) [clone .part.22]
+t CMapLoadHelper::Init(model_t*, char const*) [clone .part.34]
 t CMapLoadHelper::GetMap()
 t CMapLoadHelper::LumpBase()
 t CMapLoadHelper::LumpSize(int)
