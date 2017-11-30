@@ -148,7 +148,7 @@ t _GLOBAL__sub_I__Z19SetupMatrixIdentityv
 t _GLOBAL__sub_I__Z23CreateNullRenderContextv
 t _GLOBAL__sub_I__Z27InitializeStandardMaterialsv
 t _GLOBAL__sub_I__Z28DefaultConditionalSymbolProcPKc
-t _GLOBAL__sub_I__Z9ParseFilePKcPcPbP14characterset_t
+t _GLOBAL__sub_I__Z9ParseFilePKcPciPbP14characterset_t
 t _GLOBAL__sub_I__Z9_V_memsetPvii
 t _GLOBAL__sub_I__ZN10CUtlSymbol14s_pSymbolTableE
 t _GLOBAL__sub_I__ZN11ImageLoader14ConvertToATIxNEPKh11ImageFormatPhS2_iiiib
@@ -917,8 +917,8 @@ t AngleDiff(float, float)
 t FloorPow2(int)
 t HashBlock(void const*, unsigned int)
 t nexttoken(char*, unsigned int, char const*, char)
-t ParseFile(char*, char*, bool*)
-t ParseFile(char const*, char*, bool*, characterset_t*)
+t ParseFile(char*, char*, int, bool*)
+t ParseFile(char const*, char*, int, bool*, characterset_t*)
 t RenderBox(Vector const&, QAngle const&, Vector const&, Vector const&, Color, bool, bool)
 t RenderBox(Vector const&, QAngle const&, Vector const&, Vector const&, Color, IMaterial*, bool)
 t _V_memcmp(void const*, void const*, int)

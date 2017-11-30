@@ -1111,7 +1111,7 @@ t _GLOBAL__sub_I__Z35UpdateDirtySpatialPartitionEntitiesv
 t _GLOBAL__sub_I__Z7DoSparkP11CBaseEntityRK6VectoriibS3_
 t _GLOBAL__sub_I__Z7MD5InitP12MD5Context_t
 t _GLOBAL__sub_I__Z8InitPosePK10CStudioHdrP6VectorP17QuaternionAlignedi
-t _GLOBAL__sub_I__Z9ParseFilePKcPcPbP14characterset_t
+t _GLOBAL__sub_I__Z9ParseFilePKcPciPbP14characterset_t
 t _GLOBAL__sub_I__Z9_V_memsetPvii
 t _GLOBAL__sub_I_z_female_boomer_spawn_chance
 t _GLOBAL__sub_I_z_infected_damage_cutouts
@@ -6744,8 +6744,8 @@ t LogDamage(CTerrorPlayer*, CTakeDamageInfo const&, DamageResolutionType) [clone
 t MD5_Print(unsigned char*, int)
 t MD5Update(MD5Context_t*, unsigned char const*, unsigned int)
 t nexttoken(char*, unsigned int, char const*, char)
-t ParseFile(char*, char*, bool*)
-t ParseFile(char const*, char*, bool*, characterset_t*)
+t ParseFile(char*, char*, int, bool*)
+t ParseFile(char const*, char*, int, bool*, characterset_t*)
 t PropIsGib(CBaseEntity*)
 t void ReserveCS<CUtlVectorConservative<rr2::CriterionLambda> >(CUtlVectorConservative<rr2::CriterionLambda>&, int)
 t void ReserveCS<CUtlVectorConservative<rr2::CriterionStatic> >(CUtlVectorConservative<rr2::CriterionStatic>&, int)

@@ -483,7 +483,7 @@ t _GLOBAL__sub_I__Z29CheckConnectionLessRateLimitsR8netadr_s
 t _GLOBAL__sub_I__Z40DataTable_SetupReceiveTableFromSendTableP9SendTableb
 t _GLOBAL__sub_I__Z7MD5InitP12MD5Context_t
 t _GLOBAL__sub_I__Z8CCS_Initv
-t _GLOBAL__sub_I__Z9ParseFilePKcPcPbP14characterset_t
+t _GLOBAL__sub_I__Z9ParseFilePKcPciPbP14characterset_t
 t _GLOBAL__sub_I__Z9_V_memsetPvii
 t _GLOBAL__sub_I__ZN10CGameTrace8SetEdictEP7edict_t
 t _GLOBAL__sub_I__ZN10CUtlSymbol14s_pSymbolTableE
@@ -3115,8 +3115,8 @@ t MD5_Print(unsigned char*, int)
 t MD5Update(MD5Context_t*, unsigned char const*, unsigned int)
 t NextGetch()
 t nexttoken(char*, unsigned int, char const*, char)
-t ParseFile(char*, char*, bool*)
-t ParseFile(char const*, char*, bool*, characterset_t*)
+t ParseFile(char*, char*, int, bool*)
+t ParseFile(char const*, char*, int, bool*, characterset_t*)
 t pathmatch(char const*, char**, bool, char*, unsigned int)
 t RenderBox(Vector const&, QAngle const&, Vector const&, Vector const&, Color, bool, bool)
 t RenderBox(Vector const&, QAngle const&, Vector const&, Vector const&, Color, IMaterial*, bool)

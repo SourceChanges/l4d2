@@ -243,7 +243,7 @@ t _GLOBAL__sub_I__Z31ComputePDControllerCoefficientsPffff
 t _GLOBAL__sub_I__Z8ivp_randv
 t _GLOBAL__sub_I__Z8qh_qhullv
 t _GLOBAL__sub_I__Z9get_floatv
-t _GLOBAL__sub_I__Z9ParseFilePKcPcPbP14characterset_t
+t _GLOBAL__sub_I__Z9ParseFilePKcPciPbP14characterset_t
 t _GLOBAL__sub_I__Z9ReportObjP16IVP_Synapse_RealR8CFmtStrNILi256EE
 t _GLOBAL__sub_I__Z9_V_memsetPvii
 t _GLOBAL__sub_I__ZN10CUtlSymbol14s_pSymbolTableE
@@ -1574,8 +1574,8 @@ t HashBlock(void const*, unsigned int)
 t IsCarBody(IVP_Core*)
 t ivp_srand(int)
 t nexttoken(char*, unsigned int, char const*, char)
-t ParseFile(char*, char*, bool*)
-t ParseFile(char const*, char*, bool*, characterset_t*)
+t ParseFile(char*, char*, int, bool*)
+t ParseFile(char const*, char*, int, bool*, characterset_t*)
 t pathmatch(char const*, char**, bool, char*, unsigned int)
 t p_get_num()
 t p_realloc(void*, int)
