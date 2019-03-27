@@ -5814,7 +5814,7 @@ t CGameUI* _CreateEntityTemplate<CGameUI>(CGameUI*, char const*)
 t CGasCan* _CreateEntityTemplate<CGasCan>(CGasCan*, char const*)
 t CCarProp* _CreateEntityTemplate<CCarProp>(CCarProp*, char const*)
 t CPhysBox* _CreateEntityTemplate<CPhysBox>(CPhysBox*, char const*)
-t CSprayCan* _CreateEntityTemplate<CSprayCan>(CSprayCan*, char const*) [clone .isra.168]
+t CSprayCan* _CreateEntityTemplate<CSprayCan>(CSprayCan*, char const*) [clone .isra.169]
 t CreateGameRulesObject(char const*)
 t DEBUG_DrawScalarMeter(float, char const*, int, int)
 t DefaultCompletionFunc(char const*, char (*) [64])
